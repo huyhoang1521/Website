@@ -11,7 +11,7 @@ require("dotenv").config();
 const app = express();
 
 // Static folder
-//app.use("/client", express.static(path.join(__dirname, "client")));
+app.use("/client", express.static(path.join(__dirname, "client")));
 
 // Body Parser Middleware
 app.use(bodyParser.urlencoded({ extended: false }));
