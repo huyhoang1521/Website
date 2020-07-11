@@ -3,6 +3,7 @@ const bodyParser = require("body-parser");
 const cors = require("cors");
 const path = require("path");
 const nodemailer = require("nodemailer");
+//const webpack = require("webpack");
 //var config = require(".env");
 
 require("dotenv").config();
@@ -16,6 +17,8 @@ const app = express();
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 //app.use(cors());
+
+console.log(process.env.EMAIL);
 
 /*app.get("/", (req, res) => {
   app.set("view engine", "hello");
@@ -35,7 +38,7 @@ app.post("/api/sendEmail", (req, res) => {
 
   let mailOptions = {
     from: data.email,
-    to: "hhoang2197@gmail.com",
+    to: process.env.EMAIL,
     subject: `Message from ${data.name}`,
     html: `<p>${req.body.message}</p>`,
   };
