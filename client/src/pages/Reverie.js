@@ -275,7 +275,7 @@ export default function ImageGridList() {
             <Link
               rel="stylesheet"
               className={classes.link}
-              href="https://simmer.io/@huweeduwee/reverie"
+              href="https://connect.unity.com/mg/other/reverie-l"
             >
               Play Reverie here
             </Link>
