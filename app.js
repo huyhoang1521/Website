@@ -3,15 +3,15 @@ const bodyParser = require("body-parser");
 const cors = require("cors");
 const path = require("path");
 const nodemailer = require("nodemailer");
-//const webpack = require("webpack");
-//var config = require(".env");
 
 require("dotenv").config();
+require("heroku-self-ping").default(
+  "https://whispering-savannah-99312.herokuapp.com"
+);
 
 const app = express();
 
-// --> Add this
-// ** MIDDLEWARE ** //
+// Middleware
 const whitelist = [
   "http://localhost:3000",
   "http://localhost:8080",
@@ -30,10 +30,8 @@ const corsOptions = {
   },
 };
 
-// --> Add this
 app.use(cors(corsOptions));
 
-// --> Add this
 if (process.env.NODE_ENV === "production") {
   // Serve any static files
   app.use(express.static(path.join(__dirname, "client/build")));
@@ -49,10 +47,6 @@ app.use(bodyParser.json());
 //app.use(cors());
 
 console.log(process.env.EMAIL);
-
-/*app.get("/", (req, res) => {
-  app.set("view engine", "hello");
-});*/
 
 app.post("/api/sendEmail", (req, res) => {
   console.log(req.body);
