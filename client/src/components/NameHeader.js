@@ -6,7 +6,7 @@ import Grid from "@material-ui/core/Grid";
 import Link from "@material-ui/core/Link";
 
 const useStyles = makeStyles((theme) => ({
-  mainFeaturedPost: {
+  root: {
     position: "relative",
     marginBottom: theme.spacing(4),
   },
@@ -17,7 +17,7 @@ const useStyles = makeStyles((theme) => ({
     right: 0,
     left: 0,
   },
-  mainFeaturedPostContent: {
+  mainText: {
     position: "relative",
     padding: theme.spacing(4),
     [theme.breakpoints.up("md")]: {
@@ -32,11 +32,11 @@ export default function NameHeader(props) {
   const { post } = props;
 
   return (
-    <div className={classes.mainFeaturedPost}>
+    <div className={classes.root}>
       <div className={classes.overlay} />
-      <Grid container alignItems="left" justify="left">
+      <Grid container alignItems="flex-start" justify="flex-start">
         <Grid item md={8}>
-          <div className={classes.mainFeaturedPostContent}>
+          <div className={classes.mainText}>
             <Typography
               component="h1"
               variant="h2"

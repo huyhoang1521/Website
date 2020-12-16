@@ -1,18 +1,18 @@
 import React from "react";
-import "./styles.css";
 import { MuiThemeProvider, createMuiTheme } from "@material-ui/core/styles";
-import Container from "@material-ui/core/Container";
-import Home from "./pages/Home";
-import ContactManager from "./pages/ContactManager";
-import About from "./pages/About";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import UTDSeniorDesign from "./pages/UTDSeniorDesign";
-import L3Harris from "./pages/L3Harris";
-import Reverie from "./pages/Reverie";
-import Work from "./pages/Work";
+import Container from "@material-ui/core/Container";
+import ContactManager from "./pages/ContactManager";
 import ToolbarFile from "./components/ToolbarFile";
 import Footer from "./components/Footer";
+import L3Harris from "./pages/L3Harris";
 import Contact from "./pages/Contact";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import Reverie from "./pages/Reverie";
+import About from "./pages/About";
+import Work from "./pages/Work";
+import Home from "./pages/Home";
+import "./styles.css";
 
 const theme = createMuiTheme({
   palette: {

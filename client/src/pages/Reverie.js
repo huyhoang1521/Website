@@ -15,7 +15,7 @@ const useStyles = makeStyles((theme) => ({
     marginBottom: theme.spacing(3),
     fontFamily: `"Work Sans", "Open Sans", "Arial", sans-serif`,
   },
-  mainFeaturedPost: {
+  image: {
     position: "center",
     backgroundColor: theme.palette.grey[800],
     color: theme.palette.common.white,
@@ -39,7 +39,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function ImageGridList() {
+export default function Reverie() {
   const classes = useStyles();
 
   return (
@@ -63,7 +63,7 @@ export default function ImageGridList() {
         </Grid>
         <Grid item xs={12} md={9} gutterBottom>
           <img
-            className={classes.mainFeaturedPost}
+            className={classes.image}
             src={"/assets/game/game1.PNG"}
             alt={"pic"}
           />
@@ -107,7 +107,7 @@ export default function ImageGridList() {
         </Grid>
         <Grid item xs={12} md={9} gutterBottom>
           <img
-            className={classes.mainFeaturedPost}
+            className={classes.image}
             src={"/assets/game/game10.PNG"}
             alt={"pic"}
           />
@@ -196,7 +196,7 @@ export default function ImageGridList() {
         </Grid>
         <Grid item xs={12} md={9} gutterBottom>
           <img
-            className={classes.mainFeaturedPost}
+            className={classes.image}
             src={"/assets/game/game4.PNG"}
             alt={"pic"}
           />
@@ -227,7 +227,7 @@ export default function ImageGridList() {
         </Grid>
         <Grid item xs={12} md={9} gutterBottom>
           <img
-            className={classes.mainFeaturedPost}
+            className={classes.image}
             src={"/assets/game/game8.PNG"}
             alt={"pic"}
           />

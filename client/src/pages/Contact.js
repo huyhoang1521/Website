@@ -56,6 +56,9 @@ function Contact() {
   }
 
   function handleSubmit(event) {
+    console.log("name is " + name);
+    console.log("email is " + email);
+    console.log("message is " + message);
     axios
       .post("/api/sendEmail", {
         name: name,

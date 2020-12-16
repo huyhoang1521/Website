@@ -10,7 +10,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const mainFeaturedPost = {
+const header = {
   title: "I'm Huy Hoang",
   description: "A Software Engineer who's dedicated to creating things",
 };
@@ -18,23 +18,17 @@ const mainFeaturedPost = {
 const featuredPosts = [
   {
     title: "Contact Manager Android App",
-    description: "This is a description of the app I haven't made.",
     image: "/assets/app/contact_management_app.png",
-    imageText: "Image Text",
     link: "/contactmanager",
   },
   {
     title: "UT Dallas Senior Design Website",
-    description: "This is a description of the project I worked on.",
     image: "/assets/website/projects-edit.png",
-    imageText: "Image Text",
     link: "/utdseniordesign",
   },
   {
     title: "Reverie",
-    description: "This is a description of the project I worked on.",
     image: "/assets/game/game1-edit.png",
-    imageText: "Image Text",
     link: "/reverie",
   },
 ];
@@ -45,7 +39,7 @@ function Home() {
 
   return (
     <div className={classes.root}>
-      <NameHeader post={mainFeaturedPost} />
+      <NameHeader post={header} />
       <Grid container spacing={4}>
         {featuredPosts.map((post) => (
           <HomeSquareImage

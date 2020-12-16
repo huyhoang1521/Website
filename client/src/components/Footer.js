@@ -8,13 +8,13 @@ import GitHubIcon from "@material-ui/icons/GitHub";
 import MailIcon from "@material-ui/icons/Mail";
 import Box from "@material-ui/core/Box";
 
-const useStyles = makeStyles(theme => ({
+const useStyles = makeStyles((theme) => ({
   footer: {
     justifyContent: "center",
     backgroundColor: theme.palette.background.paper,
     // marginTop: theme.spacing(8),
-    padding: theme.spacing(6, 0)
-  }
+    padding: theme.spacing(6, 0),
+  },
 }));
 
 export default function Footer(props) {
@@ -44,7 +44,7 @@ export default function Footer(props) {
             </Link>
           </Box>
           <Box p={2}>
-            <Link rel="stylesheet" href="https://simmer.io/@huweeduwee/reverie">
+            <Link rel="stylesheet" href="/contact">
               <MailIcon />
             </Link>
           </Box>
@@ -56,5 +56,5 @@ export default function Footer(props) {
 
 Footer.propTypes = {
   description: PropTypes.string,
-  title: PropTypes.string
+  title: PropTypes.string,
 };

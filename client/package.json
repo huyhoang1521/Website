@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "proxy": "http://localhost:3001",
+  "secure": false,
   "keywords": [],
   "main": "src/index.js",
   "dependencies": {
@@ -20,7 +21,7 @@
     "typescript": "3.8.3"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "HTTPS=true SSL_CRT_FILE=./.cert/cert.pem SSL_KEY_FILE=./.cert/key.pem react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"

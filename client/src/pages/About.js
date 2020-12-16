@@ -35,7 +35,7 @@ const useStyles = makeStyles((theme) => ({
     marginBottom: theme.spacing(3),
     fontFamily: `"Work Sans", "Open Sans", "Arial", sans-serif`,
   },
-  mainFeaturedPost: {
+  picture: {
     display: "flex",
     flex: 1,
     height: 500,
@@ -122,7 +122,11 @@ export default function ImageGridList() {
             My goal is to create as many things as I can. I’m always eager to
             learn new skills and keep up with current technology trends.
           </Typography>
-          <Box display="flex" justifyContent="left" bgcolor="background.paper">
+          <Box
+            display="flex"
+            justifyContent="flex-start"
+            bgcolor="background.paper"
+          >
             <Box>
               <Link to="/contact">
                 <Button

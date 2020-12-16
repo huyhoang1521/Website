@@ -3,13 +3,20 @@ const bodyParser = require("body-parser");
 const cors = require("cors");
 const path = require("path");
 const nodemailer = require("nodemailer");
+//import hsp from "heroku-self-ping";
 
 require("dotenv").config();
-require("heroku-self-ping").default(
+/*require("heroku-self-ping").default(
   "https://whispering-savannah-99312.herokuapp.com"
-);
+);*/
 
 const app = express();
+
+const PORT = process.env.PORT || 3001;
+
+app.listen(PORT, () => console.log("Server started..."));
+
+//hsp("https://whispering-savannah-99312.herokuapp.com");
 
 // Middleware
 const whitelist = [
@@ -46,11 +53,15 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 //app.use(cors());
 
+console.log(process.env.SERVICE);
 console.log(process.env.EMAIL);
 
 app.post("/api/sendEmail", (req, res) => {
   console.log(req.body);
   let data = req.body;
+  console.log(data.name);
+  console.log(data.email);
+  console.log(data.message);
   let smtpTransport = nodemailer.createTransport({
     service: process.env.SERVICE,
     port: 465,
@@ -64,7 +75,7 @@ app.post("/api/sendEmail", (req, res) => {
     from: data.email,
     to: process.env.EMAIL,
     subject: `Message from ${data.name}`,
-    html: `<p>${req.body.message}</p>`,
+    text: `<p>${data.message}</p>`,
   };
 
   smtpTransport.sendMail(mailOptions, (error, response) => {
@@ -72,14 +83,10 @@ app.post("/api/sendEmail", (req, res) => {
       console.log(error);
       res.send(error);
     } else {
-      console.log("sucess");
+      console.log("Message sent: " + response.response);
       res.send("Success");
     }
   });
 
   smtpTransport.close();
 });
-
-const PORT = process.env.PORT || 3001;
-
-app.listen(PORT, () => console.log("Server started..."));

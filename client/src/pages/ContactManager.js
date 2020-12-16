@@ -19,7 +19,7 @@ const useStyles = makeStyles((theme) => ({
     fontFamily: `"Work Sans", "Open Sans", "Arial", sans-serif`,
     fontSize: 17,
   },
-  mainFeaturedPost: {
+  picture: {
     position: "center",
     backgroundColor: theme.palette.grey[800],
     color: theme.palette.common.white,
@@ -59,7 +59,7 @@ export default function ImageGridList() {
         </Grid>
         <Grid item xs={12} md={9} gutterBottom>
           <img
-            className={classes.mainFeaturedPost}
+            className={classes.picture}
             src={"/assets/app/contact_management_app.png"}
             alt={"pic"}
           />
@@ -159,7 +159,7 @@ export default function ImageGridList() {
         </Grid>
         <Grid item xs={12} md={9} gutterBottom>
           <img
-            className={classes.mainFeaturedPost}
+            className={classes.picture}
             src={"/assets/app/activites.png"}
             alt={"pic"}
           />
@@ -227,7 +227,7 @@ export default function ImageGridList() {
         </Grid>
         <Grid item xs={12} md={9} gutterBottom>
           <img
-            className={classes.mainFeaturedPost}
+            className={classes.picture}
             src={"/assets/app/map-address.png"}
             alt={"pic"}
           />

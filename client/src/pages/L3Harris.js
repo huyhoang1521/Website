@@ -11,17 +11,6 @@ const useStyles = makeStyles((theme) => ({
     marginBottom: theme.spacing(3),
     fontFamily: `"Work Sans", "Open Sans", "Arial", sans-serif`,
   },
-  mainFeaturedPost: {
-    position: "center",
-    backgroundColor: theme.palette.grey[800],
-    color: theme.palette.common.white,
-    marginBottom: theme.spacing(4),
-    height: "100%",
-    width: "100%",
-    backgroundSize: "cover",
-    backgroundRepeat: "no-repeat",
-    backgroundPosition: "center",
-  },
 }));
 
 export default function ImageGridList() {
