@@ -10,9 +10,9 @@ require("dotenv").config();
   "https://whispering-savannah-99312.herokuapp.com"
 );*/
 
-app.get("/.well-known/acme-challenge/:content", function (req, res) {
+/*app.get("/.well-known/acme-challenge/:content", function (req, res) {
   res.send("YwTkgy0MHVHae8dDZYFBhIe69QZzVvi8Phreq2P8Nu4");
-});
+});*/
 
 const app = express();
 
