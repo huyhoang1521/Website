@@ -10,12 +10,6 @@ require("dotenv").config();
   "https://whispering-savannah-99312.herokuapp.com"
 );*/
 
-app.get("/.well-known/acme-challenge/:content", function (req, res) {
-  res.send(
-    "YwTkgy0MHVHae8dDZYFBhIe69QZzVvi8Phreq2P8Nu4.nxCsna_RCcK4Y-0eT6ixi2Ei2B4cClaRnswIzdzWjyM"
-  );
-});
-
 const app = express();
 
 const PORT = process.env.PORT || 3001;
@@ -25,6 +19,12 @@ app.listen(PORT, () => console.log("Server started..."));
 //app.listen(80, () => console.log("Server started..."));
 
 //hsp("https://whispering-savannah-99312.herokuapp.com");
+
+app.get("/.well-known/acme-challenge/:content", function (req, res) {
+  res.send(
+    "YwTkgy0MHVHae8dDZYFBhIe69QZzVvi8Phreq2P8Nu4.nxCsna_RCcK4Y-0eT6ixi2Ei2B4cClaRnswIzdzWjyM"
+  );
+});
 
 // Middleware
 const whitelist = [
