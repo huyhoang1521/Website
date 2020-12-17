@@ -10,6 +10,9 @@ require("dotenv").config();
   "https://whispering-savannah-99312.herokuapp.com"
 );*/
 
+var http = require("http");
+var enforce = require("express-sslify");
+
 const app = express();
 
 const PORT = process.env.PORT || 3001;
@@ -26,6 +29,14 @@ app.listen(PORT, () => console.log("Server started on port " + PORT + "..."));
     "bX5OlPCW27XIHTRrDRwdrOQctyr2fZwrd4ZXCyZHTnE.nxCsna_RCcK4Y-0eT6ixi2Ei2B4cClaRnswIzdzWjyM"
   );
 });*/
+
+// Use enforce.HTTPS({ trustProtoHeader: true }) in case you are behind
+// a load balancer (e.g. Heroku). See further comments below
+app.use(enforce.HTTPS());
+
+http.createServer(app).listen(app.get("port"), function () {
+  console.log("Express server listening on port " + app.get("port"));
+});
 
 // Middleware
 const whitelist = [
