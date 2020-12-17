@@ -95,8 +95,8 @@ app.post("/api/sendEmail", (req, res) => {
   smtpTransport.close();
 });
 
-//const PORT = process.env.PORT || 3001;
+const PORT = process.env.PORT || 3001;
 
-//app.listen(PORT, () => console.log("Server started..."));
+//app.listen(80, () => console.log("Server started..."));
 
-app.listen(80, () => console.log("Server started..."));
+app.listen(PORT, () => console.log("Server started on port " + PORT + "..."));
