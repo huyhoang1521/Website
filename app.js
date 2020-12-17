@@ -96,6 +96,7 @@ app.post("/api/sendEmail", (req, res) => {
 });
 
 const PORT = process.env.PORT || 3001;
+//const PORT = process.env.PORT || 80;
 
 //app.listen(80, () => console.log("Server started..."));
 
