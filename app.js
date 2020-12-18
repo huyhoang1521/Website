@@ -1,5 +1,6 @@
-var sslRedirect = require("heroku-ssl-redirect");
+//const sslRedirect = require("heroku-ssl-redirect");
 const express = require("express");
+//const http = require('http');
 const bodyParser = require("body-parser");
 const cors = require("cors");
 const path = require("path");
@@ -27,7 +28,7 @@ const app = express();
 // Use enforce.HTTPS({ trustProtoHeader: true }) in case you are behind
 // a load balancer (e.g. Heroku). See further comments below
 
-app.use(sslRedirect());
+//pp.use(sslRedirect());
 
 //app.use(enforce.HTTPS());
 
