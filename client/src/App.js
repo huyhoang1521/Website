@@ -12,6 +12,7 @@ import Reverie from "./pages/Reverie";
 import About from "./pages/About";
 import Work from "./pages/Work";
 import Home from "./pages/Home";
+import SummitOfFriendswood from "./pages/SummitOfFriendswood";
 import "./styles.css";
 
 const theme = createMuiTheme({
@@ -51,6 +52,11 @@ export default function App() {
               <Route path="/l3harris" exact component={L3Harris} />
               <Route path="/reverie" exact component={Reverie} />
               <Route path="/contact" exact component={Contact} />
+              <Route
+                path="/summitoffriendswood"
+                exact
+                component={SummitOfFriendswood}
+              />
               <Route
                 path="/utdseniordesign"
                 exact

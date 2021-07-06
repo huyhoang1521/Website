@@ -57,7 +57,7 @@ export default function HomeSquareImage(props) {
             <Fade
               in={hover}
               style={{ transformOrigin: "20 20 0" }}
-              {...(hover ? { timeout: 1000 } : {})}
+              {...(hover ? { timeout: 800 } : {})}
             >
               <CardContent>
                 {/* Increase the priority of the hero background image */}

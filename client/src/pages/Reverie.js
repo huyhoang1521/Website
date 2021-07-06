@@ -13,6 +13,7 @@ const useStyles = makeStyles((theme) => ({
   },
   typography: {
     marginBottom: theme.spacing(3),
+    lineHeight: 2,
     fontFamily: `"Work Sans", "Open Sans", "Arial", sans-serif`,
   },
   image: {
@@ -70,7 +71,7 @@ export default function Reverie() {
         </Grid>
         <Grid item xs={12} md={9}>
           <Typography
-            variant="body1"
+            variant="body2"
             gutterBottom
             align="left"
             className={classes.typography}
@@ -93,7 +94,7 @@ export default function Reverie() {
             Level Design
           </Typography>
           <Typography
-            variant="body1"
+            variant="body2"
             gutterBottom
             align="left"
             className={classes.typography}
@@ -123,7 +124,7 @@ export default function Reverie() {
           </Typography>
 
           <Typography
-            variant="body1"
+            variant="body2"
             gutterBottom
             align="left"
             className={classes.typography}
@@ -162,7 +163,7 @@ export default function Reverie() {
             </ListItem>
           </List>
           <Typography
-            variant="body1"
+            variant="body2"
             gutterBottom
             align="left"
             className={classes.typography}
@@ -183,7 +184,7 @@ export default function Reverie() {
             Collecting Coins
           </Typography>
           <Typography
-            variant="body1"
+            variant="body2"
             gutterBottom
             align="left"
             className={classes.typography}
@@ -211,7 +212,7 @@ export default function Reverie() {
             Deaths
           </Typography>
           <Typography
-            variant="body1"
+            variant="body2"
             gutterBottom
             align="left"
             className={classes.typography}
@@ -242,7 +243,7 @@ export default function Reverie() {
             Many Ways to Play
           </Typography>
           <Typography
-            variant="body1"
+            variant="body2"
             gutterBottom
             align="left"
             className={classes.typography}
@@ -262,7 +263,7 @@ export default function Reverie() {
             Takeaways
           </Typography>
           <Typography
-            variant="body1"
+            variant="body2"
             gutterBottom
             align="left"
             className={classes.typography}

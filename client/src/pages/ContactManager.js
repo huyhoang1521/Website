@@ -12,12 +12,13 @@ const useStyles = makeStyles((theme) => ({
   },
   typography: {
     marginBottom: theme.spacing(3),
+    lineHeight: 2,
     fontFamily: `"Work Sans", "Open Sans", "Arial", sans-serif`,
   },
   typographyParagraph: {
     marginBottom: theme.spacing(3),
+    lineHeight: 2,
     fontFamily: `"Work Sans", "Open Sans", "Arial", sans-serif`,
-    fontSize: 17,
   },
   picture: {
     position: "center",
@@ -66,7 +67,7 @@ export default function ImageGridList() {
         </Grid>
         <Grid item xs={12} md={9}>
           <Typography
-            variant="body1"
+            variant="body2"
             gutterBottom
             align="left"
             className={classes.typographyParagraph}
@@ -92,7 +93,7 @@ export default function ImageGridList() {
             Screens
           </Typography>
           <Typography
-            variant="body1"
+            variant="body2"
             gutterBottom
             align="left"
             className={classes.typographyParagraph}
@@ -135,7 +136,7 @@ export default function ImageGridList() {
             </ListItem>
           </List>
           <Typography
-            variant="body1"
+            variant="body2"
             gutterBottom
             align="left"
             className={classes.typographyParagraph}
@@ -146,7 +147,7 @@ export default function ImageGridList() {
             they can click the okay button and their date will be stored.
           </Typography>
           <Typography
-            variant="body1"
+            variant="body2"
             gutterBottom
             align="left"
             className={classes.typographyParagraph}
@@ -174,7 +175,7 @@ export default function ImageGridList() {
             Accelerometer Sensor
           </Typography>
           <Typography
-            variant="body1"
+            variant="body2"
             gutterBottom
             align="left"
             className={classes.typographyParagraph}
@@ -198,7 +199,7 @@ export default function ImageGridList() {
             Address Mapping
           </Typography>
           <Typography
-            variant="body1"
+            variant="body2"
             gutterBottom
             align="left"
             className={classes.typographyParagraph}
@@ -211,7 +212,7 @@ export default function ImageGridList() {
             address.
           </Typography>
           <Typography
-            variant="body1"
+            variant="body2"
             gutterBottom
             align="left"
             className={classes.typographyParagraph}
@@ -242,7 +243,7 @@ export default function ImageGridList() {
             Database
           </Typography>
           <Typography
-            variant="body1"
+            variant="body2"
             gutterBottom
             align="left"
             className={classes.typographyParagraph}
@@ -272,7 +273,7 @@ export default function ImageGridList() {
             Takeaways
           </Typography>
           <Typography
-            variant="body1"
+            variant="body2"
             gutterBottom
             align="left"
             className={classes.typographyParagraph}

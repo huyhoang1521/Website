@@ -1,4 +1,6 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+import Fade from "@material-ui/core/Fade";
+import Container from "@material-ui/core/Container";
 import { makeStyles } from "@material-ui/core/styles";
 import WorkSquareImage from "../components/WorkSquareImage";
 import Grid from "@material-ui/core/Grid";
@@ -17,7 +19,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const featuredPosts = [
+const images = [
   {
     title: "UT Dallas Senior Design Website",
     image: "/assets/website/projects-edit.png",
@@ -49,35 +51,60 @@ const ExperiencePosts = [
 
 function Home() {
   const classes = useStyles();
+  const [imgsLoaded, setImgsLoaded] = useState(false);
+
+  useEffect(() => {
+    const loadImage = (image) => {
+      return new Promise((resolve, reject) => {
+        const loadImg = new Image();
+        loadImg.src = image.image;
+        loadImg.onload = () =>
+          setTimeout(() => {
+            resolve(image.image);
+          }, 100);
+
+        loadImg.onerror = (err) => reject(err);
+      });
+    };
+
+    Promise.all(images.map((image) => loadImage(image)))
+      .then(() => setImgsLoaded(true))
+      .catch((err) => console.log("Failed to load images", err));
+  }, []);
+
   return (
-    <div className={classes.root}>
-      <Typography
-        className={classes.typography}
-        variant="h5"
-        gutterBottom
-        align="left"
-      >
-        Projects
-      </Typography>
-      <Grid container spacing={4}>
-        {featuredPosts.map((post) => (
-          <WorkSquareImage key={post.title} post={post} />
-        ))}
-      </Grid>
-      <Typography
-        className={classes.experienceTypography}
-        variant="h5"
-        gutterBottom
-        align="left"
-      >
-        Experience
-      </Typography>
-      <Grid container spacing={4}>
-        {ExperiencePosts.map((post) => (
-          <WorkSquareImage key={post.title} post={post} />
-        ))}
-      </Grid>
-    </div>
+    <Fade in={imgsLoaded} timeout={800}>
+      <div className={classes.root}>
+        <Container>
+          <Typography
+            className={classes.typography}
+            variant="h5"
+            gutterBottom
+            align="left"
+          >
+            Projects
+          </Typography>
+          <Grid container spacing={4}>
+            {images.map((post) => (
+              <WorkSquareImage key={post.title} post={post} />
+            ))}
+          </Grid>
+          <Typography
+            className={classes.experienceTypography}
+            variant="h5"
+            gutterBottom
+            align="left"
+          >
+            Experience
+          </Typography>
+          <Grid container spacing={4}>
+            {ExperiencePosts.map((post) => (
+              <WorkSquareImage key={post.title} post={post} />
+            ))}
+          </Grid>
+        </Container>
+      </div>
+    </Fade>
   );
 }
 

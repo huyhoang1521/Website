@@ -1,5 +1,7 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+import Fade from "@material-ui/core/Fade";
 import { makeStyles } from "@material-ui/core/styles";
+import Container from "@material-ui/core/Container";
 import Typography from "@material-ui/core/Typography";
 import Grid from "@material-ui/core/Grid";
 import Button from "@material-ui/core/Button";
@@ -33,6 +35,7 @@ const useStyles = makeStyles((theme) => ({
   },
   typography: {
     marginBottom: theme.spacing(3),
+    lineHeight: 2,
     fontFamily: `"Work Sans", "Open Sans", "Arial", sans-serif`,
   },
   picture: {
@@ -68,80 +71,115 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
+const images = [
+  {
+    title: "Profile",
+    image: "/assets/profile_square.JPG",
+  },
+];
+
 export default function ImageGridList() {
   const classes = useStyles();
+  const [imgsLoaded, setImgsLoaded] = useState(false);
+
+  useEffect(() => {
+    const loadImage = (image) => {
+      return new Promise((resolve, reject) => {
+        const loadImg = new Image();
+        loadImg.src = image.image;
+        loadImg.onload = () =>
+          setTimeout(() => {
+            resolve(image.image);
+          }, 100);
+
+        loadImg.onerror = (err) => reject(err);
+      });
+    };
+
+    Promise.all(images.map((image) => loadImage(image)))
+      .then(() => setImgsLoaded(true))
+      .catch((err) => console.log("Failed to load images", err));
+  }, []);
   return (
     <div className={classes.root}>
-      <Grid container spacing={4}>
-        <Grid
-          item
-          xs={12}
-          md={4}
-          gutterBottom
-          className={classes.mainFeaturedPostPic}
-        >
-          <img src={"/assets/egg.jpg"} alt="pic" className={classes.large} />
-        </Grid>
+      <Fade in={imgsLoaded} timeout={1000}>
+        <Container>
+          <Grid container spacing={4}>
+            <Grid
+              item
+              xs={12}
+              md={4}
+              gutterBottom
+              className={classes.mainFeaturedPostPic}
+            >
+              <img
+                src={"/assets/profile_square.JPG"}
+                alt="pic"
+                className={classes.large}
+              />
+            </Grid>
 
-        <Grid item xs={10} md={8} justifyContent="center">
-          <Typography
-            variant="h4"
-            gutterBottom
-            align="left"
-            className={classes.typography}
-          >
-            I’m Huy, a software engineer
-          </Typography>
-          <Typography
-            variant="body1"
-            gutterBottom
-            align="left"
-            className={classes.typography}
-          >
-            I recently graduated from the University of Texas at Dallas with a
-            degree in Computer Science. During my time there, I learned many
-            computer science concepts, which helped shape my fundamentals in
-            programming.
-          </Typography>
-          <Typography
-            variant="body1"
-            gutterBottom
-            align="left"
-            className={classes.typography}
-          >
-            In my free time, I love to play video games, discover and play
-            music, and cook. I hope to continue to always challenge myself to
-            learn new things.
-          </Typography>
-          <Typography
-            variant="body1"
-            gutterBottom
-            align="left"
-            className={classes.typography}
-          >
-            My goal is to create as many things as I can. I’m always eager to
-            learn new skills and keep up with current technology trends.
-          </Typography>
-          <Box
-            display="flex"
-            justifyContent="flex-start"
-            bgcolor="background.paper"
-          >
-            <Box>
-              <Link to="/contact">
-                <Button
-                  size="large"
-                  square={true}
-                  disableRipple
-                  className={classes.talkButton}
-                >
-                  LET'S TALK
-                </Button>
-              </Link>
-            </Box>
-          </Box>
-        </Grid>
-      </Grid>
+            <Grid item xs={10} md={8} justifyContent="center">
+              <Typography
+                variant="h4"
+                gutterBottom
+                align="left"
+                className={classes.typography}
+              >
+                I’m Huy, a software engineer
+              </Typography>
+              <Typography
+                variant="body2"
+                gutterBottom
+                align="left"
+                className={classes.typography}
+              >
+                I recently graduated from the University of Texas at Dallas with
+                a degree in Computer Science. During my time there, I learned
+                many computer science concepts, which helped shape my
+                fundamentals in programming.
+              </Typography>
+              <Typography
+                variant="body2"
+                gutterBottom
+                align="left"
+                className={classes.typography}
+              >
+                In my free time, I love to play video games, discover and play
+                music, and cook. I hope to continue to always challenge myself
+                to learn new things.
+              </Typography>
+              <Typography
+                variant="body2"
+                gutterBottom
+                align="left"
+                className={classes.typography}
+              >
+                My goal is to create as many things as I can. I’m always eager
+                to learn new skills and keep up with current technology trends.
+              </Typography>
+              <Box
+                display="flex"
+                justifyContent="flex-start"
+                bgcolor="background.paper"
+              >
+                <Box>
+                  <Link to="/contact">
+                    <Button
+                      size="large"
+                      square={true}
+                      disableRipple
+                      className={classes.talkButton}
+                    >
+                      LET'S TALK
+                    </Button>
+                  </Link>
+                </Box>
+              </Box>
+            </Grid>
+          </Grid>
+        </Container>
+      </Fade>
     </div>
   );
 }

@@ -9,6 +9,7 @@ const useStyles = makeStyles((theme) => ({
   },
   typography: {
     marginBottom: theme.spacing(3),
+    lineHeight: 2,
     fontFamily: `"Work Sans", "Open Sans", "Arial", sans-serif`,
   },
   mainFeaturedPost: {
@@ -55,7 +56,7 @@ export default function MainFeaturedPost() {
         </Grid>
         <Grid item xs={12} md={9}>
           <Typography
-            variant="body1"
+            variant="body2"
             gutterBottom
             align="left"
             className={classes.typography}
@@ -89,7 +90,7 @@ export default function MainFeaturedPost() {
             The Problem
           </Typography>
           <Typography
-            variant="body1"
+            variant="body2"
             gutterBottom
             align="left"
             className={classes.typography}
@@ -103,7 +104,7 @@ export default function MainFeaturedPost() {
             information.
           </Typography>
           <Typography
-            variant="body1"
+            variant="body2"
             gutterBottom
             align="left"
             className={classes.typography}
@@ -132,7 +133,7 @@ export default function MainFeaturedPost() {
             My Role
           </Typography>
           <Typography
-            variant="body1"
+            variant="body2"
             gutterBottom
             align="left"
             className={classes.typography}
@@ -161,7 +162,7 @@ export default function MainFeaturedPost() {
             Landing Page
           </Typography>
           <Typography
-            variant="body1"
+            variant="body2"
             gutterBottom
             align="left"
             className={classes.typography}
@@ -183,7 +184,7 @@ export default function MainFeaturedPost() {
             Login Page
           </Typography>
           <Typography
-            variant="body1"
+            variant="body2"
             gutterBottom
             align="left"
             className={classes.typography}
@@ -207,7 +208,7 @@ export default function MainFeaturedPost() {
             Project Creation
           </Typography>
           <Typography
-            variant="body1"
+            variant="body2"
             gutterBottom
             align="left"
             className={classes.typography}
@@ -232,7 +233,7 @@ export default function MainFeaturedPost() {
             Help Ticket Submission
           </Typography>
           <Typography
-            variant="body1"
+            variant="body2"
             gutterBottom
             align="left"
             className={classes.typography}
@@ -257,7 +258,7 @@ export default function MainFeaturedPost() {
             Data Manipulation (for admin)
           </Typography>
           <Typography
-            variant="body1"
+            variant="body2"
             gutterBottom
             align="left"
             className={classes.typography}
@@ -279,7 +280,7 @@ export default function MainFeaturedPost() {
             Team Selection
           </Typography>
           <Typography
-            variant="body1"
+            variant="body2"
             gutterBottom
             align="left"
             className={classes.typography}
@@ -301,7 +302,7 @@ export default function MainFeaturedPost() {
             Project Selection
           </Typography>
           <Typography
-            variant="body1"
+            variant="body2"
             gutterBottom
             align="left"
             className={classes.typography}
