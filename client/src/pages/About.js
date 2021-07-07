@@ -10,14 +10,33 @@ import { Link } from "react-router-dom";
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    marginTop: theme.spacing(8),
+    paddingTop: theme.spacing(22),
+    [theme.breakpoints.up("md")]: {
+      paddingLeft: theme.spacing(20),
+      paddingRight: theme.spacing(15),
+    },
     display: "flex",
     flexWrap: "wrap",
     justifyContent: "space-around",
     overflow: "hidden",
     backgroundColor: theme.palette.background.paper,
   },
+  container: {
+    padding: 0,
+    margin: 0,
+    alignContent: "center",
+    justifyContent: "center",
+    justify: "center",
+    marginBottom: theme.spacing(22),
+  },
   talkButton: {
+    marginLeft: theme.spacing(20),
+    [theme.breakpoints.up("lg")]: {
+      marginLeft: theme.spacing(10),
+    },
+    [theme.breakpoints.down("xs")]: {
+      marginLeft: theme.spacing(0),
+    },
     borderRadius: 0,
     fontSize: "14px",
     paddingLeft: "24px",
@@ -33,41 +52,42 @@ const useStyles = makeStyles((theme) => ({
   talkBox: {
     padding: "0px",
   },
+
   typography: {
     marginBottom: theme.spacing(3),
+    paddingLeft: theme.spacing(20),
+    [theme.breakpoints.up("lg")]: {
+      paddingLeft: theme.spacing(10),
+      paddingRight: theme.spacing(15),
+    },
+    [theme.breakpoints.only("xs")]: {
+      paddingLeft: theme.spacing(0),
+    },
     lineHeight: 2,
     fontFamily: `"Work Sans", "Open Sans", "Arial", sans-serif`,
   },
-  picture: {
-    display: "flex",
-    flex: 1,
-    height: 500,
-    position: "relative",
-    marginBottom: theme.spacing(4),
-    backgroundImage: "/assets/egg.jpg",
-    backgroundSize: "cover",
-    backgroundRepeat: "no-repeat",
-    backgroundPosition: "center",
-  },
-  profilePic: {
-    display: "flex",
-    flex: 1,
-    position: "relative",
-    backgroundImage: "/assets/egg.jpg",
-    backgroundSize: "cover",
-    backgroundRepeat: "no-repeat",
-    backgroundPosition: "center",
-  },
-  gridList: {
-    width: 500,
-    height: 450,
+  title: {
+    marginBottom: theme.spacing(3),
+    paddingLeft: theme.spacing(20),
+    [theme.breakpoints.up("lg")]: {
+      paddingLeft: theme.spacing(10),
+      paddingRight: theme.spacing(15),
+    },
+    [theme.breakpoints.only("xs")]: {
+      paddingLeft: theme.spacing(0),
+    },
+    lineHeight: 1,
+    fontFamily: `"Work Sans", "Open Sans", "Arial", sans-serif`,
   },
   large: {
-    height: "100%",
-    width: "100%",
+    marginTop: theme.spacing(1),
     maxHeight: "300px",
     maxWidth: "300px",
     borderRadius: "50%",
+  },
+  mainFeaturedPostPic: {
+    alignContent: "center",
+    justifyContent: "center",
   },
 }));
 
@@ -103,28 +123,27 @@ export default function ImageGridList() {
   return (
     <div className={classes.root}>
       <Fade in={imgsLoaded} timeout={1000}>
-        <Container>
-          <Grid container spacing={4}>
-            <Grid
-              item
-              xs={12}
-              md={4}
-              gutterBottom
-              className={classes.mainFeaturedPostPic}
-            >
+        <Container className={classes.container} maxWidth={false}>
+          <Grid
+            container
+            spacing={1}
+            alignItems="center"
+            justify="center"
+            maxWidth={false}
+          >
+            <Grid item xs={12} md={3} align="center">
               <img
                 src={"/assets/profile_square.JPG"}
                 alt="pic"
                 className={classes.large}
               />
             </Grid>
-
-            <Grid item xs={10} md={8} justifyContent="center">
+            <Grid item xs={10} md={8} align="center">
               <Typography
                 variant="h4"
                 gutterBottom
                 align="left"
-                className={classes.typography}
+                className={classes.title}
               >
                 I’m Huy, a software engineer
               </Typography>

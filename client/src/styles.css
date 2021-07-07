@@ -1,5 +1,21 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@800&display=swap");
 .App {
   font-family: sans-serif;
   text-align: center;
+}
+
+html,
+body {
+  height: 100%;
+  overflow: hidden;
+}
+
+#main-container {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  overflow: auto;
 }

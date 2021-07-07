@@ -2,7 +2,7 @@ import React from "react";
 import { MuiThemeProvider, createMuiTheme } from "@material-ui/core/styles";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import UTDSeniorDesign from "./pages/UTDSeniorDesign";
-import Container from "@material-ui/core/Container";
+import CssBaseline from "@material-ui/core/CssBaseline";
 import ContactManager from "./pages/ContactManager";
 import ToolbarFile from "./components/ToolbarFile";
 import Footer from "./components/Footer";
@@ -21,7 +21,10 @@ const theme = createMuiTheme({
       main: "#d2d2d2",
     },
     secondary: {
-      main: "#ABD2FA",
+      main: "#e7f3f3",
+    },
+    textSecondary: {
+      main: "#264653",
     },
   },
   shadows: ["none"],
@@ -31,6 +34,7 @@ const theme = createMuiTheme({
     fontWeightLight: 300,
     fontWeightRegular: 400,
     fontWeightMedium: 500,
+    fontWeightBold: 500,
     button: {
       textTransform: "none",
     },
@@ -40,9 +44,10 @@ const theme = createMuiTheme({
 export default function App() {
   return (
     <MuiThemeProvider theme={theme}>
-      <Container maxWidth="lg">
-        <Router>
-          <div className="App">
+      <CssBaseline />
+      <Router>
+        <body>
+          <div id="main-container">
             <ToolbarFile />
             <Switch>
               <Route path="/" exact component={Home} />
@@ -63,10 +68,10 @@ export default function App() {
                 component={UTDSeniorDesign}
               />
             </Switch>
+            <Footer />
           </div>
-        </Router>
-      </Container>
-      <Footer />
+        </body>
+      </Router>
     </MuiThemeProvider>
   );
 }

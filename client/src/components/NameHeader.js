@@ -3,62 +3,91 @@ import PropTypes from "prop-types";
 import { makeStyles } from "@material-ui/core/styles";
 import Typography from "@material-ui/core/Typography";
 import Grid from "@material-ui/core/Grid";
-import Link from "@material-ui/core/Link";
 
 const useStyles = makeStyles((theme) => ({
   root: {
     position: "relative",
-    marginBottom: theme.spacing(4),
+    marginBottom: theme.spacing(2),
+    backgroundColor: "#fbf3f3",
   },
-  overlay: {
-    position: "absolute",
-    top: 0,
-    bottom: 0,
-    right: 0,
-    left: 0,
-  },
+
   mainText: {
     position: "relative",
-    padding: theme.spacing(4),
+    paddingRight: theme.spacing(4),
+    paddingLeft: theme.spacing(4),
+    paddingTop: theme.spacing(12),
+    paddingBottom: theme.spacing(12),
     [theme.breakpoints.up("md")]: {
-      padding: theme.spacing(8),
       paddingRight: 0,
+      paddingLeft: theme.spacing(20),
+      paddingRight: theme.spacing(45),
     },
+  },
+  title: {
+    fontSize: 32,
+    color: "#2d6a4f",
+
+    lineHeight: 2,
+    fontWeight: 600,
+    paddingBottom: theme.spacing(1),
+  },
+  font: {
+    fontSize: 24,
+    lineHeight: 2,
+    paddingBottom: theme.spacing(1),
   },
 }));
 
-export default function NameHeader(props) {
+export default function NameHeader() {
   const classes = useStyles();
-  const { post } = props;
 
   return (
     <div className={classes.root}>
-      <div className={classes.overlay} />
       <Grid container alignItems="flex-start" justify="flex-start">
-        <Grid item md={8}>
+        <Grid item md={12}>
           <div className={classes.mainText}>
             <Typography
-              component="h1"
-              variant="h2"
-              color="inherit"
+              className={classes.title}
+              component="h4"
+              variant="h4"
               align="left"
-              gutterBottom
             >
-              {post.title}
+              Hello, I’m Huy
             </Typography>
-            <Typography variant="h5" align="left" color="inherit" paragraph>
-              {post.description}
+            <Typography
+              className={classes.font}
+              variant="h6"
+              align="left"
+              color="inherit"
+              paragraph
+            >
+              I’m an experienced
+              <span style={{ color: "#f4a261", fontWeight: 600 }}>
+                {" "}
+                software engineer{" "}
+              </span>
+              based in
+              <span style={{ color: "#2a9d8f", fontWeight: 600 }}>
+                {" "}
+                Dallas TX,{" "}
+              </span>
+              who is actively working to create modern web and mobile
+              applications.
             </Typography>
-            <Link variant="subtitle1" align="left" href="#">
-              {post.linkText}
-            </Link>
+            <Typography
+              variant="subtitle1"
+              align="left"
+              color="inherit"
+              paragraph
+            >
+              Currently, I am working as a software engineer at{" "}
+              <span style={{ color: "#e9c46a", fontWeight: 600 }}>
+                L3Harris Technologies.
+              </span>
+            </Typography>
           </div>
         </Grid>
       </Grid>
     </div>
   );
 }
-
-NameHeader.propTypes = {
-  post: PropTypes.object,
-};

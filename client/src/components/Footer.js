@@ -11,7 +11,7 @@ import Box from "@material-ui/core/Box";
 const useStyles = makeStyles((theme) => ({
   footer: {
     justifyContent: "center",
-    backgroundColor: theme.palette.background.paper,
+    backgroundColor: "#000000",
     // marginTop: theme.spacing(8),
     padding: theme.spacing(6, 0),
   },
@@ -23,13 +23,7 @@ export default function Footer(props) {
   return (
     <footer className={classes.footer}>
       <Container maxWidth="lg">
-        <Box
-          display="flex"
-          justifyContent="center"
-          m={1}
-          p={1}
-          bgcolor="background.paper"
-        >
+        <Box display="flex" justifyContent="center" m={1} p={1}>
           <Box p={2}>
             <Link
               rel="stylesheet"
