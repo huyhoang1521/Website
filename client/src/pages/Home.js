@@ -24,29 +24,22 @@ const useStyles = makeStyles((theme) => ({
       marginTop: theme.spacing(8),
     },
   },
-  title: {
-    [theme.breakpoints.up("md")]: {
-      justifyContent: "flex-start",
-      alignItems: "flex-start",
-    },
-    flexDirection: "column",
-    display: "flex",
-    justifyContent: "center",
-    alignItems: "center",
-    paddingBottom: theme.spacing(15),
-  },
   titleText: {
     fontSize: 30,
     fontWeight: 900,
   },
   gridContainer: {
+    [theme.breakpoints.up("xs")]: {
+      paddingLeft: theme.spacing(4),
+      paddingRight: theme.spacing(4),
+    },
     [theme.breakpoints.only("md")]: {
-      paddingLeft: theme.spacing(24.2),
+      paddingLeft: theme.spacing(10),
       paddingRight: theme.spacing(10),
     },
     [theme.breakpoints.up("lg")]: {
-      paddingLeft: theme.spacing(24.2),
-      paddingRight: theme.spacing(18),
+      paddingLeft: theme.spacing(15),
+      paddingRight: theme.spacing(15),
     },
     marginTop: theme.spacing(15),
     paddingBottom: theme.spacing(20),
@@ -54,6 +47,7 @@ const useStyles = makeStyles((theme) => ({
   },
   gridItem: {
     padding: theme.spacing(3),
+
     margin: 0,
   },
   mainGrid: {
@@ -63,19 +57,12 @@ const useStyles = makeStyles((theme) => ({
 
 const images = [
   {
-    category: "Android Studio, Java, API",
-    title: "Contact Manager Android App",
-    image: "/assets/app/contact_management_app.png",
-    description: "Android app to keep track of every contact in a user's phone",
-    link: "/contactmanager",
-  },
-  {
-    category: "ReactJs, NodeJs, SQL",
-    title: "UT Dallas Senior Design Website",
-    image: "/assets/website/projects-edit.png",
+    category: "Flutter, Firebase",
+    title: "Fitness App",
+    image: "/assets/fitapp/fitapp.png",
     description:
-      "A centralized site for UTD students to pick their senior design project",
-    link: "/utdseniordesign",
+      "A calistenics based fitness app that creates a personalized workout",
+    link: "/",
   },
   {
     category: "Unity, C#",
@@ -84,6 +71,27 @@ const images = [
     description:
       "Platformer video game with many different ways to complete levels",
     link: "/reverie",
+  },
+  {
+    category: "ReactJs, NodeJs",
+    title: "Leasing Website",
+    image: "/assets/summit/summit.png",
+    description: "A simple website created for a leasing office building",
+    link: "/summitoffriendswood",
+  },
+  {
+    category: "ReactJs, NodeJs, SQL",
+    title: "UTD Senior Design",
+    image: "/assets/website/projects-edit.png",
+    description: "A centralized site for managing UTD senior design projects",
+    link: "/utdseniordesign",
+  },
+  {
+    category: "Android Studio, Java, API",
+    title: "Contact Manager",
+    image: "/assets/app/contact_management_app.png",
+    description: "Android app to keep track of every contact in a user's phone",
+    link: "/contactmanager",
   },
 ];
 
@@ -123,34 +131,16 @@ function Home() {
           <Grid
             className={classes.gridContainer}
             container
-            spacing={9}
+            spacing={4}
             align="center"
+            justifyContent="center"
+            alignItems="center"
           >
-            <Grid
-              xs={12}
-              md={3}
-              className={classes.title}
-              justifyContent="center"
-              alignItems="center"
-            >
-              <Grid item xs={12} align="center" className={classes.projects}>
-                <Typography
-                  className={classes.titleText}
-                  component="h4"
-                  variant="h4"
-                  align="left"
-                >
-                  My Projects
-                </Typography>
+            {images.map((post) => (
+              <Grid item xs={12} sm={6} md={4} className={classes.gridItem}>
+                <MediaCard key={post.title} post={post} />
               </Grid>
-            </Grid>
-            <Grid container xs={12} md={9} spacing={0}>
-              {images.map((post) => (
-                <Grid item xs={12} md={6} className={classes.gridItem}>
-                  <MediaCard key={post.title} post={post} />
-                </Grid>
-              ))}
-            </Grid>
+            ))}
           </Grid>
         </Container>
       </Fade>

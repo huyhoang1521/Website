@@ -8,6 +8,7 @@ import Link from "@material-ui/core/Link";
 const useStyles = makeStyles((theme) => ({
   root: {
     marginTop: theme.spacing(8),
+    marginBottom: theme.spacing(16),
   },
   typography: {
     marginBottom: theme.spacing(3),
@@ -52,7 +53,12 @@ export default function SummitOfFriendswood() {
   const classes = useStyles();
 
   return (
-    <div className={classes.root}>
+    <div
+      className={classes.root}
+      style={{
+        overflow: "hidden",
+      }}
+    >
       <Grid
         container
         maxWidth="md"

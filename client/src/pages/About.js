@@ -81,6 +81,8 @@ const useStyles = makeStyles((theme) => ({
   },
   large: {
     marginTop: theme.spacing(1),
+    marginBottom: theme.spacing(5),
+
     maxHeight: "300px",
     maxWidth: "300px",
     borderRadius: "50%",
@@ -121,7 +123,12 @@ export default function ImageGridList() {
       .catch((err) => console.log("Failed to load images", err));
   }, []);
   return (
-    <div className={classes.root}>
+    <div
+      className={classes.root}
+      style={{
+        overflow: "hidden",
+      }}
+    >
       <Fade in={imgsLoaded} timeout={1000}>
         <Container className={classes.container} maxWidth={false}>
           <Grid

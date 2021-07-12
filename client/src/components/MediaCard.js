@@ -9,11 +9,13 @@ import { Link } from "react-router-dom";
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    maxWidth: 375,
     backgroundColor: "transparent",
   },
   media: {
-    height: 280,
+    height: 300,
+  },
+  [theme.breakpoints.down("md")]: {
+    height: 600,
   },
   typography: {
     lineHeight: 1.2,

@@ -10,6 +10,7 @@ import Fade from "@material-ui/core/Fade";
 const useStyles = makeStyles((theme) => ({
   root: {
     marginTop: theme.spacing(8),
+    marginBottom: theme.spacing(16),
   },
   typography: {
     marginBottom: theme.spacing(3),
@@ -73,7 +74,12 @@ export default function MainFeaturedPost() {
   }, []);
 
   return (
-    <div className={classes.root}>
+    <div
+      className={classes.root}
+      style={{
+        overflow: "hidden",
+      }}
+    >
       <Fade in={imgsLoaded} timeout={1000}>
         <Grid
           container

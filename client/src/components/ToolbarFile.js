@@ -76,6 +76,7 @@ function ToolbarFile(props) {
         <AppBar>
           <Toolbar className={classes.toolbar}>
             <Link
+              to="/"
               noWrap
               variant="body2"
               href="/"

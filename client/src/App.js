@@ -13,6 +13,7 @@ import About from "./pages/About";
 import Work from "./pages/Work";
 import Home from "./pages/Home";
 import SummitOfFriendswood from "./pages/SummitOfFriendswood";
+import NegotiatingGravity from "./pages/NegotiatingGravity";
 import "./styles.css";
 
 const theme = createMuiTheme({
@@ -66,6 +67,11 @@ export default function App() {
                 path="/utdseniordesign"
                 exact
                 component={UTDSeniorDesign}
+              />
+              <Route
+                path="/negotiatinggravity"
+                exact
+                component={NegotiatingGravity}
               />
             </Switch>
             <Footer />
