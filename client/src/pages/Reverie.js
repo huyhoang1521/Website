@@ -7,6 +7,7 @@ import Typography from "@material-ui/core/Typography";
 import Link from "@material-ui/core/Link";
 import Grid from "@material-ui/core/Grid";
 import Fade from "@material-ui/core/Fade";
+import Button from "@material-ui/core/Button";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -28,6 +29,19 @@ const useStyles = makeStyles((theme) => ({
     backgroundSize: "cover",
     backgroundRepeat: "no-repeat",
     backgroundPosition: "center",
+  },
+  playButton: {
+    borderRadius: 0,
+    fontSize: "14px",
+    paddingLeft: "24px",
+    paddingTop: "10px",
+    paddingBottom: "10px",
+    paddingRight: "24px",
+    backgroundColor: "#000000",
+    color: "#FFFFFF",
+    "&:hover": {
+      backgroundColor: "rgba(0,0,0,0.8)",
+    },
   },
   item: {
     padding: 0,
@@ -317,14 +331,21 @@ export default function Reverie() {
               because I thought it would be a great first game to start with
               while having lots of room to improve the gameplay experience.
               Creating this game taught me a lot about the process.
-              <Link
-                rel="stylesheet"
-                className={classes.link}
-                href="https://connect.unity.com/mg/other/reverie-l"
-              >
-                Play Reverie here
-              </Link>
             </Typography>
+            <Link
+              rel="stylesheet"
+              className={classes.link}
+              href="https://connect.unity.com/mg/other/reverie-l"
+            >
+              <Button
+                size="large"
+                square={true}
+                disableRipple
+                className={classes.playButton}
+              >
+                Play Reverie
+              </Button>
+            </Link>
           </Grid>
         </Grid>
       </Fade>

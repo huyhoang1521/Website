@@ -190,7 +190,7 @@ export default function ImageGridList() {
                 bgcolor="background.paper"
               >
                 <Box>
-                  <Link to="/contact">
+                  <Link to="/contact" style={{ textDecoration: "none" }}>
                     <Button
                       size="large"
                       square={true}

@@ -10,8 +10,14 @@ import TextField from "@material-ui/core/TextField";
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    marginTop: theme.spacing(8),
+    [theme.breakpoints.up("md")]: {
+      paddingLeft: theme.spacing(17),
+      paddingRight: theme.spacing(17),
+    },
+    marginTop: theme.spacing(16),
     marginBottom: theme.spacing(12),
+    paddingLeft: theme.spacing(4),
+    paddingRight: theme.spacing(4),
   },
   title: {
     fontSize: 25,
@@ -88,69 +94,76 @@ function Contact() {
   }
 
   return (
-    <Fade in={true} timeout={1000}>
-      <Container maxWidth="md">
-        <Grid container spacing={8} className={classes.root}>
-          <Grid item md={12}>
-            <Typography
-              variant="h4"
-              gutterBottom
-              align="left"
-              className={classes.title}
-            >
-              Thanks for visiting! Let’s stay connected.
-            </Typography>
-          </Grid>
-          <Grid item xs={4} md={6}>
-            <form noValidate autoComplete="off">
-              <TextField
-                required
-                id="name"
-                label="Name"
+    <div
+      className={classes.root}
+      style={{
+        overflow: "hidden",
+      }}
+    >
+      <Fade in={true} timeout={1000}>
+        <Container maxWidth="lg">
+          <Grid container spacing={8}>
+            <Grid item md={12}>
+              <Typography
+                variant="h4"
+                gutterBottom
+                align="left"
+                className={classes.title}
+              >
+                Thanks for visiting! Let’s stay connected.
+              </Typography>
+            </Grid>
+            <Grid item xs={6} md={6}>
+              <form noValidate autoComplete="off">
+                <TextField
+                  required
+                  id="name"
+                  label="Name"
+                  fullWidth
+                  onChange={(event) => handleNameChange(event)}
+                />
+              </form>
+            </Grid>
+            <Grid item xs={6} md={6}>
+              <form noValidate autoComplete="off">
+                <TextField
+                  required
+                  id="email"
+                  label="Email"
+                  fullWidth
+                  onChange={(event) => handleEmailChange(event)}
+                />
+              </form>
+            </Grid>
+            <Grid item xs={12} md={12}>
+              <form noValidate autoComplete="off">
+                <TextField
+                  required
+                  id="message"
+                  label="Message"
+                  fullWidth
+                  rows="8"
+                  multiline
+                  onChange={(event) => handleMessageChange(event)}
+                />
+              </form>
+            </Grid>
+            <Grid item md={12}>
+              <Button
+                size="large"
                 fullWidth
-                onChange={(event) => handleNameChange(event)}
-              />
-            </form>
+                square={true}
+                disableRipple
+                className={classes.mailButton}
+                onClick={handleSubmit}
+              >
+                SUBMIT
+              </Button>
+            </Grid>
           </Grid>
-          <Grid item xs={4} md={6}>
-            <form noValidate autoComplete="off">
-              <TextField
-                required
-                id="email"
-                label="Email"
-                fullWidth
-                onChange={(event) => handleEmailChange(event)}
-              />
-            </form>
-          </Grid>
-          <Grid item md={12}>
-            <form noValidate autoComplete="off">
-              <TextField
-                required
-                id="message"
-                label="Message"
-                fullWidth
-                rows="8"
-                multiline
-                onChange={(event) => handleMessageChange(event)}
-              />
-            </form>
-          </Grid>
-          <Grid item md={12}>
-            <Button
-              size="large"
-              fullWidth
-              square={true}
-              disableRipple
-              className={classes.mailButton}
-              onClick={handleSubmit}
-            >
-              SUBMIT
-            </Button>
-          </Grid>
-        </Grid>
-      </Container>
-    </Fade>
+        </Container>
+      </Fade>
+    </div>
   );
 }
 

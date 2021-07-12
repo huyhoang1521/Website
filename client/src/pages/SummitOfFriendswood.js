@@ -31,7 +31,7 @@ const useStyles = makeStyles((theme) => ({
     backgroundRepeat: "no-repeat",
     backgroundPosition: "center",
   },
-  talkButton: {
+  websiteButton: {
     borderRadius: 0,
     fontSize: "14px",
     paddingLeft: "24px",
@@ -193,7 +193,7 @@ export default function SummitOfFriendswood() {
               size="large"
               square={true}
               disableRipple
-              className={classes.talkButton}
+              className={classes.websiteButton}
             >
               View Website
             </Button>
