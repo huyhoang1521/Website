@@ -30,7 +30,7 @@ const theme = createMuiTheme({
   },
   shadows: ["none"],
   typography: {
-    fontFamily: `"Work Sans", "Open Sans", "Arial", sans-serif`,
+    fontFamily: `"Arial", "Helvetica", sans-serif`,
     fontSize: 14,
     fontWeightLight: 300,
     fontWeightRegular: 400,
@@ -47,36 +47,30 @@ export default function App() {
     <MuiThemeProvider theme={theme}>
       <CssBaseline />
       <Router>
-        <body>
-          <div id="main-container">
-            <ToolbarFile />
-            <Switch>
-              <Route path="/" exact component={Home} />
-              <Route path="/work" exact component={Work} />
-              <Route path="/about" exact component={About} />
-              <Route path="/contactmanager" exact component={ContactManager} />
-              <Route path="/l3harris" exact component={L3Harris} />
-              <Route path="/reverie" exact component={Reverie} />
-              <Route path="/contact" exact component={Contact} />
-              <Route
-                path="/summitoffriendswood"
-                exact
-                component={SummitOfFriendswood}
-              />
-              <Route
-                path="/utdseniordesign"
-                exact
-                component={UTDSeniorDesign}
-              />
-              <Route
-                path="/negotiatinggravity"
-                exact
-                component={NegotiatingGravity}
-              />
-            </Switch>
-            <Footer />
-          </div>
-        </body>
+        <div id="main-container">
+          <ToolbarFile />
+          <Switch>
+            <Route path="/" exact component={Home} />
+            <Route path="/work" exact component={Work} />
+            <Route path="/about" exact component={About} />
+            <Route path="/contactmanager" exact component={ContactManager} />
+            <Route path="/l3harris" exact component={L3Harris} />
+            <Route path="/reverie" exact component={Reverie} />
+            <Route path="/contact" exact component={Contact} />
+            <Route
+              path="/summitoffriendswood"
+              exact
+              component={SummitOfFriendswood}
+            />
+            <Route path="/utdseniordesign" exact component={UTDSeniorDesign} />
+            <Route
+              path="/negotiatinggravity"
+              exact
+              component={NegotiatingGravity}
+            />
+          </Switch>
+          <Footer />
+        </div>
       </Router>
     </MuiThemeProvider>
   );

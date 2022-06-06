@@ -37,24 +37,24 @@ const useStyles = makeStyles((theme) => ({
 
 export default function MediaCard(props) {
   const classes = useStyles();
-  const { post } = props;
+  const { project } = props;
 
   return (
-    <Card className={classes.root}>
+    <Card className={classes.root} elevation={0}>
       <Typography
         className={classes.typography}
         variant="subtitle2"
         color="textSecondary"
         component="p"
       >
-        {post.category}
+        {project.category}
       </Typography>
       <Typography
         className={classes.typographyBold}
         variant="h5"
         component="h2"
       >
-        {post.title}
+        {project.title}
       </Typography>
       <Typography
         className={classes.description}
@@ -62,19 +62,13 @@ export default function MediaCard(props) {
         color="textSecondary"
         component="p"
       >
-        {post.description}
+        {project.description}
       </Typography>
-      <CardActionArea
-        component="a"
-        href="#"
-        disableRipple
-        component={Link}
-        to={post.link}
-      >
+      <CardActionArea href="#" disableRipple component={Link} to={project.link}>
         <CardMedia
           className={classes.media}
-          image={post.image}
-          title={post.title}
+          image={project.image}
+          title={project.title}
         />
       </CardActionArea>
     </Card>
@@ -82,5 +76,5 @@ export default function MediaCard(props) {
 }
 
 MediaCard.propTypes = {
-  post: PropTypes.object,
+  project: PropTypes.object,
 };

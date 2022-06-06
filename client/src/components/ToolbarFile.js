@@ -42,6 +42,7 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: "#FFFFFF",
     textTransform: "none",
     justifyContent: "flex-start",
+    height: "6em",
   },
   title: {
     flex: 1,

@@ -3,9 +3,6 @@ import PropTypes from "prop-types";
 import { makeStyles } from "@material-ui/core/styles";
 import Container from "@material-ui/core/Container";
 import Link from "@material-ui/core/Link";
-import LinkedInIcon from "@material-ui/icons/LinkedIn";
-import GitHubIcon from "@material-ui/icons/GitHub";
-import MailIcon from "@material-ui/icons/Mail";
 import Grid from "@material-ui/core/Grid";
 
 import { Typography } from "@material-ui/core";
@@ -25,7 +22,6 @@ const useStyles = makeStyles((theme) => ({
 
 export default function Footer(props) {
   const classes = useStyles();
-
   return (
     <footer className={classes.footer}>
       <Container maxWidth="lg">
@@ -44,7 +40,7 @@ export default function Footer(props) {
               color="textSecondary"
               component="p"
             >
-              ©2021 Designed by Huy Hoang
+              {`©${new Date().getFullYear()} Designed by Huy Hoang`}
             </Typography>
           </Grid>
           <Grid container xs={6} align="right">

@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import NameHeader from "../components/NameHeader";
 import MediaCard from "../components/MediaCard";
-import Typography from "@material-ui/core/Typography";
 import Container from "@material-ui/core/Container";
 import Fade from "@material-ui/core/Fade";
 import Grid from "@material-ui/core/Grid";
@@ -76,7 +75,8 @@ const images = [
     category: "ReactJs, NodeJs",
     title: "Leasing Website",
     image: "/assets/summit/summit.png",
-    description: "A simple website created for a leasing office building",
+    description:
+      "A website for a local office building used to display leasing information",
     link: "/summitoffriendswood",
   },
   {
@@ -126,7 +126,7 @@ function Home() {
       }}
     >
       <Fade in={imgsLoaded} timeout={1000}>
-        <Container className={classes.container} maxWidth={false}>
+        <Container className={classes.container} maxWidth="false">
           <NameHeader />
           <Grid
             className={classes.gridContainer}
@@ -136,9 +136,16 @@ function Home() {
             justifyContent="center"
             alignItems="center"
           >
-            {images.map((post) => (
-              <Grid item xs={12} sm={6} md={4} className={classes.gridItem}>
-                <MediaCard key={post.title} post={post} />
+            {images.map((project) => (
+              <Grid
+                item
+                xs={12}
+                sm={6}
+                md={4}
+                key={project.title}
+                className={classes.gridItem}
+              >
+                <MediaCard key={project.title} project={project} />
               </Grid>
             ))}
           </Grid>

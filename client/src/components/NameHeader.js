@@ -1,5 +1,4 @@
 import React from "react";
-import PropTypes from "prop-types";
 import { makeStyles } from "@material-ui/core/styles";
 import Typography from "@material-ui/core/Typography";
 import Grid from "@material-ui/core/Grid";
@@ -18,7 +17,6 @@ const useStyles = makeStyles((theme) => ({
     paddingTop: theme.spacing(12),
     paddingBottom: theme.spacing(12),
     [theme.breakpoints.up("md")]: {
-      paddingRight: 0,
       paddingLeft: theme.spacing(20),
       paddingRight: theme.spacing(45),
     },
