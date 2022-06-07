@@ -129,7 +129,7 @@ export default function GeneralHeader(props) {
               component="div"
               align="left"
             >
-              Reverie
+              {projectImage.title}
             </Typography>
             <Typography
               className={classes.sub}
@@ -138,7 +138,7 @@ export default function GeneralHeader(props) {
               color="inherit"
               paragraph
             >
-              A 2D platformer video game created with Unity
+              {projectImage.description}
             </Typography>
 
             {projectImage.items.map((item) => (
