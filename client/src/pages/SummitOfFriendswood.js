@@ -164,16 +164,13 @@ const imageText = {
 
 const images = [
   {
-    image: "/assets/game/game_mac.png",
+    image: "/assets/website/summit_mac.png",
   },
   {
-    image: "/assets/game/game5.PNG",
+    image: "/assets/website/gallery.png",
   },
   {
-    image: "/assets/game/game10.PNG",
-  },
-  {
-    image: "/assets/game/game4.PNG",
+    image: "/assets/website/maps.png",
   },
 ];
 
