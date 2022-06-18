@@ -6,7 +6,6 @@ import CssBaseline from "@material-ui/core/CssBaseline";
 import ContactManager from "./pages/ContactManager";
 import ToolbarFile from "./components/ToolbarFile";
 import Footer from "./components/Footer";
-import L3Harris from "./pages/L3Harris";
 import Contact from "./pages/Contact";
 import Reverie from "./pages/Reverie";
 import About from "./pages/About";
@@ -54,7 +53,6 @@ export default function App() {
             <Route path="/work" exact component={Work} />
             <Route path="/about" exact component={About} />
             <Route path="/contactmanager" exact component={ContactManager} />
-            <Route path="/l3harris" exact component={L3Harris} />
             <Route path="/reverie" exact component={Reverie} />
             <Route path="/contact" exact component={Contact} />
             <Route

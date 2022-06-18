@@ -215,7 +215,15 @@ export default function SummitOfFriendswood() {
             justify="center"
             alignItems="top"
           >
-            <Grid item xs={12} sm={8} md={8} className={classes.titleGrid}>
+            <Grid
+              item
+              xs={12}
+              sm={8}
+              md={8}
+              lg={8}
+              xl={8}
+              className={classes.titleGrid}
+            >
               <Typography variant="h3" align="left" className={classes.title}>
                 Overview
               </Typography>
@@ -235,7 +243,7 @@ export default function SummitOfFriendswood() {
                 office leasing building.
               </Typography>
             </Grid>
-            <Grid item xs={12} sm={8} md={8}>
+            <Grid item xs={12} sm={8} md={8} lg={8} xl={8}>
               <Typography
                 variant="h6"
                 align="left"
@@ -254,7 +262,7 @@ export default function SummitOfFriendswood() {
                 the building.
               </Typography>
             </Grid>
-            <Grid item xs={12} sm={8} md={8}>
+            <Grid item xs={12} sm={8} md={8} lg={8} xl={8}>
               <Typography
                 variant="h6"
                 align="left"
@@ -276,14 +284,14 @@ export default function SummitOfFriendswood() {
                 mininal components helps to put emphasis on the images.
               </Typography>
             </Grid>
-            <Grid item xs={12} sm={8} md={5}>
+            <Grid item xs={12} sm={8} md={5} lg={5} xl={5}>
               <img
                 className={classes.image2}
                 src={"/assets/website/gallery.png"}
                 alt={"pic"}
               />
             </Grid>
-            <Grid item xs={12} sm={8} md={8}>
+            <Grid item xs={12} sm={8} md={8} lg={8} xl={8}>
               <Typography
                 variant="h6"
                 align="left"
@@ -306,14 +314,14 @@ export default function SummitOfFriendswood() {
                 on a map.
               </Typography>
             </Grid>
-            <Grid item xs={12} sm={8} md={5}>
+            <Grid item xs={12} sm={8} md={5} lg={5} xl={5}>
               <img
                 className={classes.image2}
                 src={"/assets/website/maps.png"}
                 alt={"pic"}
               />
             </Grid>
-            <Grid item xs={12} sm={8} md={8}>
+            <Grid item xs={12} sm={8} md={8} lg={8} xl={8}>
               <Typography
                 variant="h6"
                 align="left"

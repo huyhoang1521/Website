@@ -221,7 +221,15 @@ export default function Reverie() {
             justify="center"
             alignItems="top"
           >
-            <Grid item xs={12} sm={8} md={8} className={classes.titleGrid}>
+            <Grid
+              item
+              xs={12}
+              sm={8}
+              md={8}
+              lg={8}
+              xl={8}
+              className={classes.titleGrid}
+            >
               <Typography variant="h3" align="left" className={classes.title}>
                 Overview
               </Typography>
@@ -241,7 +249,7 @@ export default function Reverie() {
                 Game Programming class.
               </Typography>
             </Grid>
-            <Grid item xs={12} sm={8} md={8}>
+            <Grid item xs={12} sm={8} md={8} lg={8} xl={8}>
               <Typography
                 variant="h6"
                 align="left"
@@ -264,8 +272,16 @@ export default function Reverie() {
               </Typography>
             </Grid>
 
-            <Grid item xs={12} sm={12} md={12}></Grid>
-            <Grid item xs={12} sm={4} md={4} className={classes.list}>
+            <Grid item xs={12} sm={12} md={12} lg={12} xl={12}></Grid>
+            <Grid
+              item
+              xs={12}
+              sm={4}
+              md={4}
+              lg={4}
+              xl={4}
+              className={classes.list}
+            >
               <Typography
                 variant="h6"
                 align="left"
@@ -326,7 +342,15 @@ export default function Reverie() {
                 </ListItem>
               </List>
             </Grid>
-            <Grid item xs={12} sm={4} md={4} className={classes.list}>
+            <Grid
+              item
+              xs={12}
+              sm={4}
+              md={4}
+              lg={4}
+              xl={4}
+              className={classes.list}
+            >
               <Typography
                 variant="h6"
                 align="left"
@@ -391,7 +415,7 @@ export default function Reverie() {
               </List>
             </Grid>
 
-            <Grid item xs={12} sm={8} md={8}>
+            <Grid item xs={12} sm={8} md={8} lg={8} xl={8}>
               <Typography
                 variant="h6"
                 align="left"
@@ -411,24 +435,24 @@ export default function Reverie() {
                 next level once the player has completed the current level.
               </Typography>
             </Grid>
-            <Grid item xs={12} sm={12} md={12}></Grid>
+            <Grid item xs={12} sm={12} md={12} lg={12} xl={12}></Grid>
 
-            <Grid item xs={12} sm={8} md={4}>
+            <Grid item xs={12} sm={8} md={4} lg={4} xl={4}>
               <img
                 className={classes.image2}
                 src={"/assets/game/game5.PNG"}
                 alt={"pic"}
               />
             </Grid>
-            <Grid item xs={12} sm={8} md={4}>
+            <Grid item xs={12} sm={8} md={4} lg={4} xl={4}>
               <img
                 className={classes.image2}
                 src={"/assets/game/game10.PNG"}
                 alt={"pic"}
               />
             </Grid>
-            <Grid item xs={12} sm={12} md={12}></Grid>
-            <Grid item xs={12} sm={8} md={8}>
+            <Grid item xs={12} sm={12} md={12} lg={12} xl={12}></Grid>
+            <Grid item xs={12} sm={8} md={8} lg={8} xl={8}>
               <Typography
                 variant="h6"
                 align="left"
@@ -447,14 +471,14 @@ export default function Reverie() {
                 player will have to plan their route to collect these coins.
               </Typography>
             </Grid>
-            <Grid item xs={12} sm={8} md={5}>
+            <Grid item xs={12} sm={8} md={5} lg={5} xl={5}>
               <img
                 className={classes.image2}
                 src={"/assets/game/game4.PNG"}
                 alt={"pic"}
               />
             </Grid>
-            <Grid item xs={12} sm={8} md={8}>
+            <Grid item xs={12} sm={8} md={8} lg={8} xl={8}>
               <Typography
                 variant="h6"
                 align="left"
