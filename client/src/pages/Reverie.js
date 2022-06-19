@@ -391,7 +391,6 @@ export default function Reverie() {
                     Designed hard levels
                   </Typography>
                 </ListItem>
-
                 <ListItem className={classes.item} align="left">
                   <Typography
                     variant="h6"
