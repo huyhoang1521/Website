@@ -191,7 +191,15 @@ export default function ContactManager() {
             justify="center"
             alignItems="top"
           >
-            <Grid item xs={12} sm={8} md={8} className={classes.titleGrid}>
+            <Grid
+              item
+              xs={12}
+              sm={8}
+              md={8}
+              lg={8}
+              xl={8}
+              className={classes.titleGrid}
+            >
               <Typography variant="h3" align="left" className={classes.title}>
                 Overview
               </Typography>
@@ -219,7 +227,7 @@ export default function ContactManager() {
                 using Android Studio.
               </Typography>
             </Grid>
-            <Grid item xs={12} sm={8} md={8}>
+            <Grid item xs={12} sm={8} md={8} lg={8} xl={8}>
               <Typography
                 variant="h6"
                 align="left"
@@ -240,7 +248,7 @@ export default function ContactManager() {
                 contact.
               </Typography>
             </Grid>
-            <Grid item xs={12} sm={8} md={8}>
+            <Grid item xs={12} sm={8} md={8} lg={8} xl={8}>
               <Typography
                 variant="h6"
                 align="left"
@@ -265,7 +273,7 @@ export default function ContactManager() {
               </Typography>
             </Grid>
 
-            <Grid item xs={12} sm={8} md={8}>
+            <Grid item xs={12} sm={8} md={8} lg={8} xl={8}>
               <Typography
                 variant="h6"
                 align="left"
@@ -288,7 +296,7 @@ export default function ContactManager() {
                 phone.
               </Typography>
             </Grid>
-            <Grid item xs={12} sm={8} md={8}>
+            <Grid item xs={12} sm={8} md={8} lg={8} xl={8}>
               <Typography
                 variant="h6"
                 align="left"
@@ -323,14 +331,14 @@ export default function ContactManager() {
                 address.
               </Typography>
             </Grid>
-            <Grid item xs={12} sm={7} md={7}>
+            <Grid item xs={12} sm={7} md={7} lg={7} xl={7}>
               <img
                 className={classes.image2}
                 src={"/assets/app/map-address.png"}
                 alt={"pic"}
               />
             </Grid>
-            <Grid item xs={12} sm={8} md={8}>
+            <Grid item xs={12} sm={8} md={8} lg={8} xl={8}>
               <Typography
                 variant="h6"
                 align="left"
@@ -359,7 +367,7 @@ export default function ContactManager() {
                 in the form of action bar buttons on the main screen.
               </Typography>
             </Grid>
-            <Grid item xs={12} sm={8} md={8}>
+            <Grid item xs={12} sm={8} md={8} lg={8} xl={8}>
               <Typography
                 variant="h6"
                 align="left"
