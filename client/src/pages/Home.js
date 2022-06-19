@@ -61,7 +61,7 @@ const images = [
     image: "/assets/fitapp/fitapp.png",
     description:
       "A calistenics based fitness app that creates a personalized workout",
-    link: "/",
+    link: "/negotiatinggravity",
   },
   {
     category: "Unity, C#",

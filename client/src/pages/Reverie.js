@@ -50,28 +50,28 @@ const useStyles = makeStyles((theme) => ({
     fontFamily: `"Work Sans", "Open Sans", "Arial", sans-serif`,
     fontSize: 28,
     fontWeight: 600,
-    color: "#8f5daf",
+    color: "#2f4f06",
     marginBottom: theme.spacing(2),
   },
   subtitle2: {
     fontFamily: `"Work Sans", "Open Sans", "Arial", sans-serif`,
     fontSize: 22,
     fontWeight: 600,
-    color: "#8f5daf",
+    color: "#2f4f06",
     marginTop: theme.spacing(6),
   },
   subtitle3: {
     fontFamily: `"Work Sans", "Open Sans", "Arial", sans-serif`,
     fontSize: 16,
     fontWeight: 600,
-    color: "#8f5daf",
+    color: "#2f4f06",
     marginTop: theme.spacing(6),
   },
   subtitle4: {
     fontFamily: `"Work Sans", "Open Sans", "Arial", sans-serif`,
     fontSize: 16,
     fontWeight: 600,
-    color: "#8f5daf",
+    color: "#2f4f06",
   },
 
   typography1: {
@@ -162,7 +162,7 @@ const imageText = {
     "Role Level Designer",
     "Tools Unity, C#",
   ],
-  backgroundColor: "#dea2e7",
+  backgroundColor: "#c1b1dc",
 };
 
 const images = [

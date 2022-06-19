@@ -48,28 +48,28 @@ const useStyles = makeStyles((theme) => ({
     fontFamily: `"Work Sans", "Open Sans", "Arial", sans-serif`,
     fontSize: 28,
     fontWeight: 600,
-    color: "#0F488A",
+    color: "#2f4f06",
     marginBottom: theme.spacing(2),
   },
   subtitle2: {
     fontFamily: `"Work Sans", "Open Sans", "Arial", sans-serif`,
     fontSize: 22,
     fontWeight: 600,
-    color: "#0F488A",
+    color: "#2f4f06",
     marginTop: theme.spacing(6),
   },
   subtitle3: {
     fontFamily: `"Work Sans", "Open Sans", "Arial", sans-serif`,
     fontSize: 16,
     fontWeight: 600,
-    color: "#0F488A",
+    color: "#2f4f06",
     marginTop: theme.spacing(6),
   },
   subtitle4: {
     fontFamily: `"Work Sans", "Open Sans", "Arial", sans-serif`,
     fontSize: 16,
     fontWeight: 600,
-    color: "#0F488A",
+    color: "#2f4f06",
   },
 
   typography1: {
@@ -159,7 +159,7 @@ const imageText = {
     "Role Front End Developer",
     "Tools React, Node.js",
   ],
-  backgroundColor: "#a3c7f0",
+  backgroundColor: "#e9e9e9",
 };
 
 const images = [
