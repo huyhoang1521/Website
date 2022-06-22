@@ -307,7 +307,7 @@ export default function Reverie() {
                     className={classes.typographyList}
                   >
                     <span style={{ fontWeight: 900 }}>WASD/Arrow Keys: </span>
-                    Control character movement
+                    Control character
                   </Typography>
                 </ListItem>
                 <ListItem className={classes.item} align="left">

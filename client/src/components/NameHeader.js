@@ -14,11 +14,22 @@ const useStyles = makeStyles((theme) => ({
     position: "relative",
     paddingRight: theme.spacing(4),
     paddingLeft: theme.spacing(4),
-    paddingTop: theme.spacing(12),
-    paddingBottom: theme.spacing(12),
-    [theme.breakpoints.up("md")]: {
-      paddingLeft: theme.spacing(20),
-      paddingRight: theme.spacing(45),
+    paddingTop: theme.spacing(10),
+    paddingBottom: theme.spacing(10),
+    [theme.breakpoints.down("sm")]: {
+      paddingTop: theme.spacing(18),
+    },
+    [theme.breakpoints.only("md")]: {
+      paddingTop: theme.spacing(12),
+      paddingBottom: theme.spacing(12),
+    },
+    [theme.breakpoints.only("lg")]: {
+      paddingTop: theme.spacing(13),
+      paddingBottom: theme.spacing(13),
+    },
+    [theme.breakpoints.only("xl")]: {
+      paddingTop: theme.spacing(18),
+      paddingBottom: theme.spacing(18),
     },
   },
   title: {
@@ -41,8 +52,8 @@ export default function NameHeader() {
 
   return (
     <div className={classes.root}>
-      <Grid container alignItems="flex-start" justify="flex-start">
-        <Grid item md={12}>
+      <Grid container justifyContent="center" justify="center" alignItems="top">
+        <Grid item xs={12} sm={12} md={10} lg={10} xl={7}>
           <div className={classes.mainText}>
             <Typography
               className={classes.title}

@@ -28,18 +28,8 @@ const useStyles = makeStyles((theme) => ({
     fontWeight: 900,
   },
   gridContainer: {
-    [theme.breakpoints.up("xs")]: {
-      paddingLeft: theme.spacing(4),
-      paddingRight: theme.spacing(4),
-    },
-    [theme.breakpoints.only("md")]: {
-      paddingLeft: theme.spacing(10),
-      paddingRight: theme.spacing(10),
-    },
-    [theme.breakpoints.up("lg")]: {
-      paddingLeft: theme.spacing(15),
-      paddingRight: theme.spacing(15),
-    },
+    paddingLeft: theme.spacing(4),
+    paddingRight: theme.spacing(4),
     marginTop: theme.spacing(15),
     paddingBottom: theme.spacing(20),
     margins: 0,
@@ -132,22 +122,34 @@ function Home() {
             className={classes.gridContainer}
             container
             spacing={4}
-            align="center"
             justifyContent="center"
-            alignItems="center"
+            justify="center"
+            alignItems="top"
           >
-            {images.map((project) => (
+            <Grid item xs={12} sm={12} md={10} lg={10} xl={7}>
               <Grid
-                item
-                xs={12}
-                sm={6}
-                md={4}
-                key={project.title}
-                className={classes.gridItem}
+                container
+                spacing={4}
+                align="center"
+                justifyContent="center"
+                alignItems="center"
               >
-                <MediaCard key={project.title} project={project} />
+                {images.map((project) => (
+                  <Grid
+                    item
+                    xs={12}
+                    sm={6}
+                    md={4}
+                    lg={4}
+                    xl={4}
+                    key={project.title}
+                    className={classes.gridItem}
+                  >
+                    <MediaCard key={project.title} project={project} />
+                  </Grid>
+                ))}
               </Grid>
-            ))}
+            </Grid>
           </Grid>
         </Container>
       </Fade>
