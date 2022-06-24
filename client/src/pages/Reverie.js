@@ -20,9 +20,6 @@ const useStyles = makeStyles((theme) => ({
   container: {
     padding: 0,
     margins: 0,
-    [theme.breakpoints.up("md")]: {
-      marginTop: theme.spacing(8),
-    },
   },
   backgroundImage: {
     [theme.breakpoints.between("sm", "md")]: {
@@ -162,6 +159,8 @@ const imageText = {
     "Role Level Designer",
     "Tools Unity, C#",
   ],
+  github: "",
+  link: "https://connect.unity.com/mg/other/reverie-l",
   backgroundColor: "#c1b1dc",
 };
 
@@ -224,7 +223,7 @@ export default function Reverie() {
             <Grid
               item
               xs={12}
-              sm={8}
+              sm={10}
               md={8}
               lg={8}
               xl={8}
@@ -249,7 +248,7 @@ export default function Reverie() {
                 Game Programming class.
               </Typography>
             </Grid>
-            <Grid item xs={12} sm={8} md={8} lg={8} xl={8}>
+            <Grid item xs={12} sm={10} md={8} lg={8} xl={8}>
               <Typography
                 variant="h6"
                 align="left"
@@ -414,7 +413,7 @@ export default function Reverie() {
               </List>
             </Grid>
 
-            <Grid item xs={12} sm={8} md={8} lg={8} xl={8}>
+            <Grid item xs={12} sm={10} md={8} lg={8} xl={8}>
               <Typography
                 variant="h6"
                 align="left"
@@ -436,14 +435,14 @@ export default function Reverie() {
             </Grid>
             <Grid item xs={12} sm={12} md={12} lg={12} xl={12}></Grid>
 
-            <Grid item xs={12} sm={8} md={4} lg={4} xl={4}>
+            <Grid item xs={12} sm={10} md={4} lg={4} xl={4}>
               <img
                 className={classes.image2}
                 src={"/assets/game/game5.PNG"}
                 alt={"pic"}
               />
             </Grid>
-            <Grid item xs={12} sm={8} md={4} lg={4} xl={4}>
+            <Grid item xs={12} sm={10} md={4} lg={4} xl={4}>
               <img
                 className={classes.image2}
                 src={"/assets/game/game10.PNG"}
@@ -451,7 +450,7 @@ export default function Reverie() {
               />
             </Grid>
             <Grid item xs={12} sm={12} md={12} lg={12} xl={12}></Grid>
-            <Grid item xs={12} sm={8} md={8} lg={8} xl={8}>
+            <Grid item xs={12} sm={10} md={8} lg={8} xl={8}>
               <Typography
                 variant="h6"
                 align="left"
@@ -470,14 +469,14 @@ export default function Reverie() {
                 player will have to plan their route to collect these coins.
               </Typography>
             </Grid>
-            <Grid item xs={12} sm={8} md={5} lg={5} xl={5}>
+            <Grid item xs={12} sm={10} md={5} lg={5} xl={5}>
               <img
                 className={classes.image2}
                 src={"/assets/game/game4.PNG"}
                 alt={"pic"}
               />
             </Grid>
-            <Grid item xs={12} sm={8} md={8} lg={8} xl={8}>
+            <Grid item xs={12} sm={10} md={8} lg={8} xl={8}>
               <Typography
                 variant="h6"
                 align="left"

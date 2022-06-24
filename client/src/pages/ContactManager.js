@@ -16,9 +16,6 @@ const useStyles = makeStyles((theme) => ({
   container: {
     padding: 0,
     margins: 0,
-    [theme.breakpoints.up("md")]: {
-      marginTop: theme.spacing(8),
-    },
   },
   backgroundImage: {
     [theme.breakpoints.between("sm", "md")]: {
@@ -138,6 +135,8 @@ const imageText = {
     "Role Android Developer",
     "Tools Android Studio, SQLite",
   ],
+  github: "",
+  link: "",
   backgroundColor: "#e9e9e9",
 };
 
@@ -194,7 +193,7 @@ export default function ContactManager() {
             <Grid
               item
               xs={12}
-              sm={8}
+              sm={10}
               md={8}
               lg={8}
               xl={8}
@@ -227,7 +226,7 @@ export default function ContactManager() {
                 using Android Studio.
               </Typography>
             </Grid>
-            <Grid item xs={12} sm={8} md={8} lg={8} xl={8}>
+            <Grid item xs={12} sm={10} md={8} lg={8} xl={8}>
               <Typography
                 variant="h6"
                 align="left"
@@ -248,7 +247,7 @@ export default function ContactManager() {
                 contact.
               </Typography>
             </Grid>
-            <Grid item xs={12} sm={8} md={8} lg={8} xl={8}>
+            <Grid item xs={12} sm={10} md={8} lg={8} xl={8}>
               <Typography
                 variant="h6"
                 align="left"
@@ -273,7 +272,7 @@ export default function ContactManager() {
               </Typography>
             </Grid>
 
-            <Grid item xs={12} sm={8} md={8} lg={8} xl={8}>
+            <Grid item xs={12} sm={10} md={8} lg={8} xl={8}>
               <Typography
                 variant="h6"
                 align="left"
@@ -296,7 +295,7 @@ export default function ContactManager() {
                 phone.
               </Typography>
             </Grid>
-            <Grid item xs={12} sm={8} md={8} lg={8} xl={8}>
+            <Grid item xs={12} sm={10} md={8} lg={8} xl={8}>
               <Typography
                 variant="h6"
                 align="left"
@@ -338,7 +337,7 @@ export default function ContactManager() {
                 alt={"pic"}
               />
             </Grid>
-            <Grid item xs={12} sm={8} md={8} lg={8} xl={8}>
+            <Grid item xs={12} sm={10} md={8} lg={8} xl={8}>
               <Typography
                 variant="h6"
                 align="left"
@@ -367,7 +366,7 @@ export default function ContactManager() {
                 in the form of action bar buttons on the main screen.
               </Typography>
             </Grid>
-            <Grid item xs={12} sm={8} md={8} lg={8} xl={8}>
+            <Grid item xs={12} sm={10} md={8} lg={8} xl={8}>
               <Typography
                 variant="h6"
                 align="left"

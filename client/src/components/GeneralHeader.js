@@ -4,13 +4,17 @@ import Typography from "@material-ui/core/Typography";
 import Grid from "@material-ui/core/Grid";
 import ListItem from "@material-ui/core/ListItem";
 import Paper from "@material-ui/core/Paper";
-
+import GitHubIcon from "@material-ui/icons/GitHub";
+import FilterNoneOutlinedIcon from "@material-ui/icons/FilterNoneOutlined";
 import PropTypes from "prop-types";
+import IconButton from "@material-ui/core/IconButton";
+import Link from "@material-ui/core/Link";
 
 const useStyles = makeStyles((theme) => ({
   root: {
     position: "relative",
     marginBottom: theme.spacing(2),
+    paddingTop: "6em",
   },
 
   mainText: {
@@ -20,7 +24,7 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   gridContainer: {
-    paddingTop: theme.spacing(20),
+    paddingTop: theme.spacing(7),
     paddingBottom: theme.spacing(7),
   },
   item: {
@@ -30,41 +34,71 @@ const useStyles = makeStyles((theme) => ({
     marginBottom: 0,
     padding: 0,
   },
+  itemText2: {
+    marginBottom: 0,
+    padding: 0,
+  },
   itemTypography: {
     [theme.breakpoints.only("xs")]: {
-      fontSize: 14,
+      fontSize: "2.8vw",
     },
     [theme.breakpoints.only("sm")]: {
-      fontSize: 12,
+      fontSize: "1.5vw",
     },
-    [theme.breakpoints.up("md")]: {
-      fontSize: 15,
+    [theme.breakpoints.only("md")]: {
+      fontSize: "1.3vw",
+    },
+    [theme.breakpoints.only("lg")]: {
+      fontSize: "1.05vw",
+    },
+    [theme.breakpoints.only("xl")]: {
+      fontSize: "1vw",
+    },
+    paddingRight: theme.spacing(0.5),
+  },
+
+  link: {
+    //color: "#bad9f4",
+    color: "#000000",
+    "&:hover": {
+      color: "#d2d2d2",
     },
   },
   sub: {
-    marginBottom: 0,
-    fontSize: 19,
     [theme.breakpoints.only("xs")]: {
-      fontSize: 17,
+      fontSize: "4.0vw",
     },
     [theme.breakpoints.only("sm")]: {
-      fontSize: 14,
+      fontSize: "2.2vw",
     },
-    [theme.breakpoints.up("md")]: {
-      fontSize: 20,
+    [theme.breakpoints.only("md")]: {
+      fontSize: "1.6vw",
     },
+    [theme.breakpoints.only("lg")]: {
+      fontSize: "1.45vw",
+    },
+    [theme.breakpoints.only("xl")]: {
+      fontSize: "1.3vw",
+    },
+
+    marginBottom: 0,
     paddingBottom: theme.spacing(2),
   },
   title: {
-    fontSize: 40,
     [theme.breakpoints.only("xs")]: {
-      fontSize: 32,
+      fontSize: "8.4vw",
     },
     [theme.breakpoints.only("sm")]: {
-      fontSize: 30,
+      fontSize: "4.0vw",
     },
-    [theme.breakpoints.up("md")]: {
-      fontSize: 40,
+    [theme.breakpoints.only("md")]: {
+      fontSize: "3.5vw",
+    },
+    [theme.breakpoints.only("lg")]: {
+      fontSize: "3.0vw",
+    },
+    [theme.breakpoints.only("xl")]: {
+      fontSize: "2.4vw",
     },
     fontWeight: 600,
   },
@@ -121,7 +155,7 @@ export default function GeneralHeader(props) {
         justify="center"
         alignItems="top"
       >
-        <Grid item xs={10} sm={4} md={4}>
+        <Grid item xs={10} sm={5} md={4} lg={4} xl={4}>
           <div className={classes.mainText}>
             <Typography
               className={classes.title}
@@ -131,6 +165,7 @@ export default function GeneralHeader(props) {
             >
               {projectImage.title}
             </Typography>
+
             <Typography
               className={classes.sub}
               variant="subtitle1"
@@ -140,7 +175,6 @@ export default function GeneralHeader(props) {
             >
               {projectImage.description}
             </Typography>
-
             {projectImage.items.map((item) => (
               <ListItem className={classes.itemText}>
                 <Typography
@@ -153,10 +187,42 @@ export default function GeneralHeader(props) {
                 </Typography>
               </ListItem>
             ))}
+            {projectImage.github != "" || projectImage.link != "" ? (
+              <ListItem className={classes.itemText2}>
+                <Typography
+                  className={classes.itemTypography}
+                  variant="subtitle2"
+                  align="left"
+                  color="inherit"
+                >
+                  <span style={{ fontWeight: "bold" }}>Links:</span>
+                </Typography>
+                {projectImage.github != "" ? (
+                  <Link rel="stylesheet" href={projectImage.github}>
+                    <IconButton className={classes.link}>
+                      <GitHubIcon />
+                    </IconButton>
+                  </Link>
+                ) : (
+                  <p> </p>
+                )}
+                {projectImage.link != "" ? (
+                  <Link rel="stylesheet" href={projectImage.link}>
+                    <IconButton className={classes.link}>
+                      <FilterNoneOutlinedIcon />
+                    </IconButton>
+                  </Link>
+                ) : (
+                  <p> </p>
+                )}
+              </ListItem>
+            ) : (
+              <p> </p>
+            )}
           </div>
         </Grid>
 
-        <Grid item xs={10} sm={4} md={4}>
+        <Grid item xs={10} sm={5} md={4} lg={4} xl={4}>
           <Paper
             className={classes.image}
             alignItems="top"

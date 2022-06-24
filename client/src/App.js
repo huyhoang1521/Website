@@ -9,7 +9,6 @@ import Footer from "./components/Footer";
 import Contact from "./pages/Contact";
 import Reverie from "./pages/Reverie";
 import About from "./pages/About";
-import Work from "./pages/Work";
 import Home from "./pages/Home";
 import SummitOfFriendswood from "./pages/SummitOfFriendswood";
 import NegotiatingGravity from "./pages/NegotiatingGravity";
@@ -50,7 +49,6 @@ export default function App() {
           <ToolbarFile />
           <Switch>
             <Route path="/" exact component={Home} />
-            <Route path="/work" exact component={Work} />
             <Route path="/about" exact component={About} />
             <Route path="/contactmanager" exact component={ContactManager} />
             <Route path="/reverie" exact component={Reverie} />

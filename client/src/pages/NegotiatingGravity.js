@@ -16,9 +16,6 @@ const useStyles = makeStyles((theme) => ({
   container: {
     padding: 0,
     margins: 0,
-    [theme.breakpoints.up("md")]: {
-      marginTop: theme.spacing(8),
-    },
   },
   backgroundImage: {
     [theme.breakpoints.between("sm", "md")]: {
@@ -138,6 +135,8 @@ const imageText = {
     "Years 2020-2021",
     "Tools Flutter, Firebase",
   ],
+  github: "https://github.com/huyhoang1521/Fit-App",
+  link: "",
   backgroundColor: "#e9e9e9",
 };
 
@@ -194,7 +193,7 @@ export default function NegotiatingGravity() {
             <Grid
               item
               xs={12}
-              sm={8}
+              sm={10}
               md={8}
               lg={8}
               xl={8}
@@ -222,7 +221,7 @@ export default function NegotiatingGravity() {
                 Flutter and Firebase.
               </Typography>
             </Grid>
-            <Grid item xs={12} sm={8} md={8} lg={8} xl={8}>
+            <Grid item xs={12} sm={10} md={8} lg={8} xl={8}>
               <Typography
                 variant="h6"
                 align="left"
@@ -257,7 +256,7 @@ export default function NegotiatingGravity() {
                 alt={"pic"}
               />
             </Grid>
-            <Grid item xs={12} sm={8} md={8} lg={8} xl={8}>
+            <Grid item xs={12} sm={10} md={8} lg={8} xl={8}>
               <Typography
                 variant="h6"
                 align="left"
@@ -279,7 +278,7 @@ export default function NegotiatingGravity() {
                 differently depending on the state of the authentication.
               </Typography>
             </Grid>
-            <Grid item xs={12} sm={8} md={8} lg={8} xl={8}>
+            <Grid item xs={12} sm={10} md={8} lg={8} xl={8}>
               <Typography
                 variant="h6"
                 align="left"

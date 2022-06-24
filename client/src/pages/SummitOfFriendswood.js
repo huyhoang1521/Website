@@ -18,9 +18,6 @@ const useStyles = makeStyles((theme) => ({
   container: {
     padding: 0,
     margins: 0,
-    [theme.breakpoints.up("md")]: {
-      marginTop: theme.spacing(8),
-    },
   },
   backgroundImage: {
     [theme.breakpoints.between("sm", "md")]: {
@@ -159,6 +156,8 @@ const imageText = {
     "Role Front End Developer",
     "Tools React, Node.js",
   ],
+  github: "https://github.com/huyhoang1521/Summit-of-Friendswood",
+  link: "https://summit-of-friendswood.herokuapp.com/",
   backgroundColor: "#e9e9e9",
 };
 
@@ -218,7 +217,7 @@ export default function SummitOfFriendswood() {
             <Grid
               item
               xs={12}
-              sm={8}
+              sm={10}
               md={8}
               lg={8}
               xl={8}
@@ -243,7 +242,7 @@ export default function SummitOfFriendswood() {
                 office leasing building.
               </Typography>
             </Grid>
-            <Grid item xs={12} sm={8} md={8} lg={8} xl={8}>
+            <Grid item xs={12} sm={10} md={8} lg={8} xl={8}>
               <Typography
                 variant="h6"
                 align="left"
@@ -262,7 +261,7 @@ export default function SummitOfFriendswood() {
                 the building.
               </Typography>
             </Grid>
-            <Grid item xs={12} sm={8} md={8} lg={8} xl={8}>
+            <Grid item xs={12} sm={10} md={8} lg={8} xl={8}>
               <Typography
                 variant="h6"
                 align="left"
@@ -284,14 +283,14 @@ export default function SummitOfFriendswood() {
                 mininal components helps to put emphasis on the images.
               </Typography>
             </Grid>
-            <Grid item xs={12} sm={8} md={5} lg={5} xl={5}>
+            <Grid item xs={12} sm={10} md={5} lg={5} xl={5}>
               <img
                 className={classes.image2}
                 src={"/assets/website/gallery.png"}
                 alt={"pic"}
               />
             </Grid>
-            <Grid item xs={12} sm={8} md={8} lg={8} xl={8}>
+            <Grid item xs={12} sm={10} md={8} lg={8} xl={8}>
               <Typography
                 variant="h6"
                 align="left"
@@ -314,14 +313,14 @@ export default function SummitOfFriendswood() {
                 on a map.
               </Typography>
             </Grid>
-            <Grid item xs={12} sm={8} md={5} lg={5} xl={5}>
+            <Grid item xs={12} sm={10} md={5} lg={5} xl={5}>
               <img
                 className={classes.image2}
                 src={"/assets/website/maps.png"}
                 alt={"pic"}
               />
             </Grid>
-            <Grid item xs={12} sm={8} md={8} lg={8} xl={8}>
+            <Grid item xs={12} sm={10} md={8} lg={8} xl={8}>
               <Typography
                 variant="h6"
                 align="left"

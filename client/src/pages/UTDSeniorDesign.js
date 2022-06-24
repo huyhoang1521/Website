@@ -16,9 +16,6 @@ const useStyles = makeStyles((theme) => ({
   container: {
     padding: 0,
     margins: 0,
-    [theme.breakpoints.up("md")]: {
-      marginTop: theme.spacing(8),
-    },
   },
   backgroundImage: {
     [theme.breakpoints.between("sm", "md")]: {
@@ -138,6 +135,8 @@ const imageText = {
     "Role Front End Developer",
     "Tools React, Node.js, mySQL",
   ],
+  github: "https://github.com/theKidOfArcrania/Senior-Enarc-website",
+  link: "",
   backgroundColor: "#fbcd7a",
 };
 
@@ -197,7 +196,7 @@ export default function UTDSeniorDesign() {
             <Grid
               item
               xs={12}
-              sm={8}
+              sm={10}
               md={8}
               lg={8}
               xl={8}
@@ -237,14 +236,14 @@ export default function UTDSeniorDesign() {
                 information they need to stay updated on their projects.
               </Typography>
             </Grid>
-            <Grid item xs={12} sm={8} md={8} lg={8} xl={8}>
+            <Grid item xs={12} sm={10} md={8} lg={8} xl={8}>
               <img
                 className={classes.image2}
                 src={"assets/website/utd-slide-poster.png"}
                 alt={"pic"}
               />
             </Grid>
-            <Grid item xs={12} sm={8} md={8} lg={8} xl={8}>
+            <Grid item xs={12} sm={10} md={8} lg={8} xl={8}>
               <Typography
                 variant="h6"
                 align="left"
@@ -266,7 +265,7 @@ export default function UTDSeniorDesign() {
                 to gather team information.
               </Typography>
             </Grid>
-            <Grid item xs={12} sm={8} md={8} lg={8} xl={8}>
+            <Grid item xs={12} sm={10} md={8} lg={8} xl={8}>
               <Typography
                 variant="h6"
                 align="left"
@@ -293,7 +292,7 @@ export default function UTDSeniorDesign() {
                 access all the information they need regarding the projects.
               </Typography>
             </Grid>
-            <Grid item xs={12} sm={8} md={8} lg={8} xl={8}>
+            <Grid item xs={12} sm={10} md={8} lg={8} xl={8}>
               <Typography
                 variant="h6"
                 align="left"
@@ -313,7 +312,7 @@ export default function UTDSeniorDesign() {
                 To design the website, we worked with ReactJS and Material UI.
               </Typography>
             </Grid>
-            <Grid item xs={12} sm={8} md={8} lg={8} xl={8}>
+            <Grid item xs={12} sm={10} md={8} lg={8} xl={8}>
               <Typography
                 variant="h6"
                 align="left"
@@ -333,7 +332,7 @@ export default function UTDSeniorDesign() {
                 the user to the corresponding login page.
               </Typography>
             </Grid>
-            <Grid item xs={12} sm={8} md={8} lg={8} xl={8}>
+            <Grid item xs={12} sm={10} md={8} lg={8} xl={8}>
               <Typography
                 variant="h6"
                 align="left"
@@ -356,14 +355,14 @@ export default function UTDSeniorDesign() {
                 only view teams.
               </Typography>
             </Grid>
-            <Grid item xs={12} sm={8} md={8} lg={8} xl={8}>
+            <Grid item xs={12} sm={10} md={8} lg={8} xl={8}>
               <img
                 className={classes.image2}
                 src={"/assets/website/home-login.png"}
                 alt={"pic"}
               />
             </Grid>
-            <Grid item xs={12} sm={8} md={8} lg={8} xl={8}>
+            <Grid item xs={12} sm={10} md={8} lg={8} xl={8}>
               <Typography
                 variant="h6"
                 align="left"
@@ -386,7 +385,7 @@ export default function UTDSeniorDesign() {
                 to the Sponsor and perhaps Admin.
               </Typography>
             </Grid>
-            <Grid item xs={12} sm={8} md={8} lg={8} xl={8}>
+            <Grid item xs={12} sm={10} md={8} lg={8} xl={8}>
               <Typography
                 variant="h6"
                 align="left"
@@ -406,7 +405,7 @@ export default function UTDSeniorDesign() {
                 and report if the change was unsuccessful for any reason.
               </Typography>
             </Grid>
-            <Grid item xs={12} sm={8} md={8} lg={8} xl={8}>
+            <Grid item xs={12} sm={10} md={8} lg={8} xl={8}>
               <Typography
                 variant="h6"
                 align="left"
@@ -426,7 +425,7 @@ export default function UTDSeniorDesign() {
                 teams constantly update their statuses.
               </Typography>
             </Grid>
-            <Grid item xs={12} sm={8} md={8} lg={8} xl={8}>
+            <Grid item xs={12} sm={10} md={8} lg={8} xl={8}>
               <Typography
                 variant="h6"
                 align="left"
