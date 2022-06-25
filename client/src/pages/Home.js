@@ -30,7 +30,6 @@ const useStyles = makeStyles((theme) => ({
   gridContainer: {
     paddingLeft: theme.spacing(4),
     paddingRight: theme.spacing(4),
-    marginTop: theme.spacing(15),
     paddingBottom: theme.spacing(20),
     margins: 0,
   },

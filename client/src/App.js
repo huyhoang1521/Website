@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import UTDSeniorDesign from "./pages/UTDSeniorDesign";
 import CssBaseline from "@material-ui/core/CssBaseline";
 import ContactManager from "./pages/ContactManager";
-import ToolbarFile from "./components/ToolbarFile";
+import ButtonAppBar from "./components/ButtonAppBar";
 import Footer from "./components/Footer";
 import Contact from "./pages/Contact";
 import Reverie from "./pages/Reverie";
@@ -46,7 +46,7 @@ export default function App() {
       <CssBaseline />
       <Router>
         <div id="main-container">
-          <ToolbarFile />
+          <ButtonAppBar />
           <Switch>
             <Route path="/" exact component={Home} />
             <Route path="/about" exact component={About} />

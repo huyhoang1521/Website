@@ -58,10 +58,10 @@ const useStyles = makeStyles((theme) => ({
   },
 
   link: {
-    //color: "#bad9f4",
     color: "#000000",
     "&:hover": {
       color: "#d2d2d2",
+      backgroundColor: "transparent",
     },
   },
   sub: {
@@ -199,7 +199,7 @@ export default function GeneralHeader(props) {
                 </Typography>
                 {projectImage.github != "" ? (
                   <Link rel="stylesheet" href={projectImage.github}>
-                    <IconButton className={classes.link}>
+                    <IconButton className={classes.link} disableRipple>
                       <GitHubIcon />
                     </IconButton>
                   </Link>
@@ -208,7 +208,7 @@ export default function GeneralHeader(props) {
                 )}
                 {projectImage.link != "" ? (
                   <Link rel="stylesheet" href={projectImage.link}>
-                    <IconButton className={classes.link}>
+                    <IconButton className={classes.link} disableRipple>
                       <FilterNoneOutlinedIcon />
                     </IconButton>
                   </Link>
