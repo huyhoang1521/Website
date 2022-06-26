@@ -22,6 +22,11 @@ const useStyles = makeStyles((theme) => ({
   title: {
     fontSize: 25,
   },
+  container: {
+    padding: 0,
+    margin: 0,
+    height: "100vh",
+  },
   mailButton: {
     borderRadius: 0,
     fontSize: "14px",
@@ -101,9 +106,15 @@ function Contact() {
       }}
     >
       <Fade in={true} timeout={1000}>
-        <Container maxWidth="lg">
-          <Grid container spacing={8}>
-            <Grid item md={12}>
+        <Container className={classes.container} maxWidth="false">
+          <Grid
+            container
+            justifyContent="center"
+            justify="center"
+            alignItems="top"
+            spacing={8}
+          >
+            <Grid item xs={12} sm={10} md={10} lg={10} xl={10}>
               <Typography
                 variant="h4"
                 gutterBottom
@@ -113,7 +124,7 @@ function Contact() {
                 Thanks for visiting! Let’s stay connected.
               </Typography>
             </Grid>
-            <Grid item xs={6} md={6}>
+            <Grid item xs={6} sm={5} md={5} lg={5} xl={5}>
               <form noValidate autoComplete="off">
                 <TextField
                   required
@@ -124,7 +135,7 @@ function Contact() {
                 />
               </form>
             </Grid>
-            <Grid item xs={6} md={6}>
+            <Grid item xs={6} sm={5} md={5} lg={5} xl={5}>
               <form noValidate autoComplete="off">
                 <TextField
                   required
@@ -135,7 +146,7 @@ function Contact() {
                 />
               </form>
             </Grid>
-            <Grid item xs={12} md={12}>
+            <Grid item xs={12} sm={10} md={10} lg={10} xl={10}>
               <form noValidate autoComplete="off">
                 <TextField
                   required
@@ -148,7 +159,7 @@ function Contact() {
                 />
               </form>
             </Grid>
-            <Grid item md={12}>
+            <Grid item xs={12} sm={10} md={10} lg={10} xl={10}>
               <Button
                 size="large"
                 fullWidth

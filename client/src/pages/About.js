@@ -160,10 +160,10 @@ export default function ImageGridList() {
                 align="left"
                 className={classes.typography}
               >
-                I recently graduated from the University of Texas at Dallas with
-                a degree in Computer Science. During my time there, I learned
-                many computer science concepts, which helped shape my
-                fundamentals in programming.
+                I graduated from the University of Texas at Dallas with a degree
+                in Computer Science. During my time there, I learned many
+                computer science concepts, which helped shape my fundamentals in
+                programming.
               </Typography>
               <Typography
                 variant="body2"

@@ -4,8 +4,8 @@ import { makeStyles } from "@material-ui/core/styles";
 import Container from "@material-ui/core/Container";
 import Link from "@material-ui/core/Link";
 import Grid from "@material-ui/core/Grid";
-
-import { Typography } from "@material-ui/core";
+import IconButton from "@material-ui/core/IconButton";
+import Typography from "@material-ui/core/Typography";
 
 const useStyles = makeStyles((theme) => ({
   footer: {
@@ -13,40 +13,76 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: "#000000",
     // marginTop: theme.spacing(8),
     padding: theme.spacing(10),
+    paddingLeft: theme.spacing(4),
+    paddingRight: theme.spacing(4),
   },
   typography: {
     color: "#FFFFFF",
     fontSize: 14,
+    "&:hover": {
+      color: "#d2d2d2",
+      backgroundColor: "transparent",
+    },
+  },
+  grid: {
+    padding: 0,
+  },
+  title: {
+    flexGrow: 1,
   },
 }));
 
-export default function Footer(props) {
+export default function Footer() {
   const classes = useStyles();
   return (
     <footer className={classes.footer}>
-      <Container maxWidth="lg">
+      <Container maxWidth="false">
         <Grid
-          className={classes.gridContainer}
           container
           spacing={4}
-          align="center"
           justifyContent="center"
-          alignItems="center"
+          justify="center"
+          alignItems="top"
         >
-          <Grid item xs={6} align="left">
-            <Typography
-              className={classes.typography}
-              variant="subtitle2"
-              color="textSecondary"
-              component="p"
+          <Grid xs={11} sm={11} md={9} lg={9} xl={6} className={classes.grid}>
+            <IconButton
+              edge="start"
+              color="inherit"
+              aria-label="menu"
+              disableRipple
             >
-              {`©${new Date().getFullYear()} Designed by Huy Hoang`}
-            </Typography>
-          </Grid>
-          <Grid container xs={6} align="right">
-            <Grid item xs={12}>
               <Link
                 rel="stylesheet"
+                style={{ textDecoration: "none" }}
+                href="https://github.com/huyhoang1521/Website"
+              >
+                <Typography
+                  className={classes.typography}
+                  variant="subtitle2"
+                  color="textSecondary"
+                  component="p"
+                >
+                  {`©${new Date().getFullYear()} Designed by Huy Hoang`}
+                </Typography>
+              </Link>
+            </IconButton>
+
+            <Typography variant="h6" className={classes.title}></Typography>
+          </Grid>
+          <Grid
+            container
+            xs={1}
+            sm={1}
+            md={1}
+            lg={1}
+            xl={1}
+            className={classes.grid}
+            align="right"
+          >
+            <Grid item xs={12} sm={12} md={12} lg={12} xl={12}>
+              <Link
+                rel="stylesheet"
+                style={{ textDecoration: "none" }}
                 href="https://www.linkedin.com/in/huyhoang2197/"
               >
                 <Typography
@@ -59,8 +95,12 @@ export default function Footer(props) {
                 </Typography>
               </Link>
             </Grid>
-            <Grid item xs={12}>
-              <Link rel="stylesheet" href="https://github.com/huyhoang1521">
+            <Grid item xs={12} sm={12} md={12} lg={12} xl={12}>
+              <Link
+                rel="stylesheet"
+                style={{ textDecoration: "none" }}
+                href="https://github.com/huyhoang1521"
+              >
                 <Typography
                   className={classes.typography}
                   variant="subtitle2"
@@ -71,8 +111,12 @@ export default function Footer(props) {
                 </Typography>
               </Link>
             </Grid>
-            <Grid item xs={12}>
-              <Link rel="stylesheet" href="/contact">
+            <Grid item xs={12} sm={12} md={12} lg={12} xl={12}>
+              <Link
+                rel="stylesheet"
+                style={{ textDecoration: "none" }}
+                href="/contact"
+              >
                 <Typography
                   className={classes.typography}
                   variant="subtitle2"
@@ -89,8 +133,3 @@ export default function Footer(props) {
     </footer>
   );
 }
-
-Footer.propTypes = {
-  description: PropTypes.string,
-  title: PropTypes.string,
-};
