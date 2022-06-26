@@ -27,7 +27,8 @@ const useStyles = makeStyles((theme) => ({
     alignContent: "center",
     justifyContent: "center",
     justify: "center",
-    height: "100vh",
+    flexGrow: 1,
+    paddingBottom: theme.spacing(20),
   },
   talkButton: {
     marginLeft: theme.spacing(20),

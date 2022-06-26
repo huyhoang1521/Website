@@ -6,15 +6,24 @@ import Grid from "@material-ui/core/Grid";
 const useStyles = makeStyles((theme) => ({
   root: {
     position: "relative",
-    paddingTop: "6em",
     marginBottom: theme.spacing(7),
     //backgroundColor: "#fbf3f3",
   },
   container: {
-    paddingTop: theme.spacing(25),
-    paddingBottom: theme.spacing(30),
     paddingLeft: theme.spacing(4),
     paddingRight: theme.spacing(4),
+    alignItems: "top",
+
+    [theme.breakpoints.only("xs")]: {
+      paddingTop: "15vw",
+    },
+    [theme.breakpoints.up("sm")]: {
+      paddingTop: "10vw",
+    },
+    [theme.breakpoints.only("xl")]: {
+      alignItems: "center",
+    },
+    minHeight: "100vh",
   },
   mainText: {
     position: "relative",
@@ -24,20 +33,37 @@ const useStyles = makeStyles((theme) => ({
     position: "relative",
     paddingBottom: theme.spacing(3),
   },
-  title1: {
-    fontSize: 18,
-    lineHeight: 2,
-    fontWeight: 600,
+  sub: {
+    fontSize: 16,
+    lineHeight: 1.45,
+    [theme.breakpoints.only("xl")]: {
+      fontSize: 18,
+    },
   },
   title: {
-    fontSize: 32,
-    color: "#2d6a4f",
+    fontSize: 20,
     lineHeight: 2,
     fontWeight: 600,
+    [theme.breakpoints.only("xl")]: {
+      fontSize: 25,
+    },
   },
+
   font: {
     color: "#2d6a4f",
-    fontSize: 65,
+    [theme.breakpoints.only("xs")]: {
+      fontSize: 35,
+    },
+    [theme.breakpoints.only("sm")]: {
+      fontSize: 55,
+    },
+    [theme.breakpoints.up("md")]: {
+      fontSize: 65,
+    },
+    [theme.breakpoints.only("xl")]: {
+      fontSize: 72,
+    },
+
     lineHeight: 1.25,
     padding: 0,
   },
@@ -53,14 +79,13 @@ export default function NameHeader() {
         container
         justifyContent="center"
         justify="center"
-        alignItems="top"
       >
         <Grid item xs={12} sm={12} md={10} lg={10} xl={7}>
           <Grid container justifyContent="left" justify="left" alignItems="top">
             <Grid item xs={12} sm={12} md={10} lg={10} xl={7}>
               <div className={classes.mainText}>
                 <Typography
-                  className={classes.title1}
+                  className={classes.title}
                   component="h4"
                   variant="h4"
                   align="left"
@@ -90,6 +115,8 @@ export default function NameHeader() {
                   variant="subtitle1"
                   align="left"
                   color="inherit"
+                  div
+                  className={classes.sub}
                   paragraph
                 >
                   I’m an experienced

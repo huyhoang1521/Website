@@ -25,7 +25,8 @@ const useStyles = makeStyles((theme) => ({
   container: {
     padding: 0,
     margin: 0,
-    height: "100vh",
+    flexGrow: 1,
+    paddingBottom: theme.spacing(20),
   },
   mailButton: {
     borderRadius: 0,

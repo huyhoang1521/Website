@@ -19,9 +19,6 @@ const useStyles = makeStyles((theme) => ({
   container: {
     padding: 0,
     margins: 0,
-    [theme.breakpoints.up("md")]: {
-      marginTop: theme.spacing(8),
-    },
   },
   titleText: {
     fontSize: 30,
@@ -37,9 +34,6 @@ const useStyles = makeStyles((theme) => ({
     padding: theme.spacing(3),
 
     margin: 0,
-  },
-  mainGrid: {
-    marginTop: theme.spacing(3),
   },
 }));
 
@@ -115,7 +109,7 @@ function Home() {
       }}
     >
       <Fade in={imgsLoaded} timeout={1000}>
-        <Container className={classes.container} maxWidth="false">
+        <Container className={classes.container} maxWidth="lg">
           <NameHeader />
           <Grid
             className={classes.gridContainer}

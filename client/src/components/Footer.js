@@ -1,5 +1,4 @@
 import React from "react";
-import PropTypes from "prop-types";
 import { makeStyles } from "@material-ui/core/styles";
 import Container from "@material-ui/core/Container";
 import Link from "@material-ui/core/Link";
@@ -11,7 +10,6 @@ const useStyles = makeStyles((theme) => ({
   footer: {
     justifyContent: "center",
     backgroundColor: "#000000",
-    // marginTop: theme.spacing(8),
     padding: theme.spacing(10),
     paddingLeft: theme.spacing(4),
     paddingRight: theme.spacing(4),
