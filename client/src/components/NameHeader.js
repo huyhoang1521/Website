@@ -13,14 +13,10 @@ const useStyles = makeStyles((theme) => ({
     paddingLeft: theme.spacing(4),
     paddingRight: theme.spacing(4),
     alignItems: "top",
+    paddingTop: "15vw",
 
-    [theme.breakpoints.only("xs")]: {
-      paddingTop: "15vw",
-    },
-    [theme.breakpoints.up("sm")]: {
-      paddingTop: "10vw",
-    },
-    [theme.breakpoints.only("xl")]: {
+    [theme.breakpoints.up("lg")]: {
+      paddingTop: 0,
       alignItems: "center",
     },
     minHeight: "100vh",
@@ -80,9 +76,14 @@ export default function NameHeader() {
         justifyContent="center"
         justify="center"
       >
-        <Grid item xs={12} sm={12} md={10} lg={10} xl={7}>
-          <Grid container justifyContent="left" justify="left" alignItems="top">
-            <Grid item xs={12} sm={12} md={10} lg={10} xl={7}>
+        <Grid item xs={12} sm={12} md={6} lg={6} xl={6}>
+          <Grid
+            container
+            justifyContent="center"
+            justify="center"
+            alignItems="top"
+          >
+            <Grid item xs={12} sm={12} md={12} lg={12} xl={12}>
               <div className={classes.mainText}>
                 <Typography
                   className={classes.title}
@@ -94,7 +95,7 @@ export default function NameHeader() {
                 </Typography>
               </div>
             </Grid>
-            <Grid item xs={12} sm={12} md={10} lg={10} xl={10}>
+            <Grid item xs={12} sm={12} md={12} lg={12} xl={12}>
               <div className={classes.mainText2}>
                 <Typography
                   className={classes.font}
@@ -109,7 +110,7 @@ export default function NameHeader() {
               </div>
             </Grid>
 
-            <Grid item xs={12} sm={12} md={7} lg={7} xl={7}>
+            <Grid item xs={12} sm={12} md={12} lg={12} xl={12}>
               <div className={classes.mainText}>
                 <Typography
                   variant="subtitle1"
